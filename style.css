@@ -1,0 +1,92 @@
+/* 1. Reset y tipografía básica */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ddd;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+}
+
+/* 2. Encabezado */
+h1 {
+  margin: 1em 0;
+  font-size: 2rem;
+}
+
+/* 3. Galería responsive usando flexbox */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.galeria a {
+  flex: 1 1 200px; /* cada elemento mínimo de 200px, luego se encogen/estiran */
+  max-width: 300px;
+}
+
+.galeria img {
+  width: 100%;     /* ocupa todo el ancho del “flex item” */
+  height: auto;    /* mantén proporción */
+  border: 2px solid #666;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* 4. Estilos para navegación de la página individual */
+nav {
+  margin: 1em 0;
+  font-size: 1rem;
+}
+nav a {
+  margin: 0 10px;
+  color: #0077cc;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* 5. Contenedor de imagen individual */
+.imagen-centro {
+  margin-bottom: 1.5em;
+}
+.imagen-centro img {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+  border: 4px solid #555;
+  border-radius: 6px;
+  background-color: white;
+}
+
+/* 6. Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .galeria a {
+    flex: 1 1 150px;  /* en pantallas más pequeñas, cada miniatura mínimo 150px */
+    max-width: 200px;
+  }
+  nav a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 0.9rem;
+  }
+  .imagen-centro img {
+    width: 100%;
+  }
+}
