@@ -4,7 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>colores navarra 2022</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos inline mínimos para mobile-first */
+    body {
+      background: #888;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px auto;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      nav a {
+        display: inline-block;
+        margin: 5px 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -12,16 +40,6 @@
     <a href="index.html">🏠 Volver a la galería</a>
     <a href="esparza_salazar_2022.html">Siguiente ➡</a>
   </nav>
-  <div class="imagen-centro">
-    <img src="https://cdn.jsdelivr.net/gh/jlzig/panoramic219/HD/colores_navarra_2022.jpg" alt="colores navarra 2022">
-  </div>
-  <div class="metadata">
-    <h2>Metadatos</h2>
-    <ul>
-      <li><strong>Fecha:</strong> 2022:12:06 15:41:47</li>
-      <li><strong>Cámara:</strong> Canon EOS 6D</li>
-      <li><strong>Dimensiones:</strong> 3150×1350</li>
-    </ul>
-  </div>
+  <img src="https://cdn.jsdelivr.net/gh/jlzig/panoramic219/hd/colores_navarra_2022.jpg" alt="colores navarra 2022">
 </body>
 </html>
