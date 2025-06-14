@@ -70,6 +70,18 @@ nav a:hover {
   border: none;
   background-color: transparent;
 }
+.tags {
+  margin-top: 8px;
+}
+.tag {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-right: 5px;
+  font-size: 0.85em;
+  color: #333;
+}
 
 /* 6. Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
