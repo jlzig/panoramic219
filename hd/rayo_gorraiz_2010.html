@@ -42,12 +42,38 @@
       max-height: 80vh;
     }
     
-    /* Botón para intercambiar visualización */
+    /* Botones de control */
+    .home-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0.7;
+      z-index: 100;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
+    }
+    
+    .home-button:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    
     .view-toggle {
       position: fixed;
-      bottom: 20px;
+      top: 20px;
       right: 20px;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0,0,0,0.6);
       color: white;
       border: none;
       border-radius: 50%;
@@ -56,6 +82,12 @@
       font-size: 20px;
       cursor: pointer;
       z-index: 100;
+      transition: all 0.3s ease;
+    }
+    
+    .view-toggle:hover {
+      opacity: 1;
+      transform: scale(1.1);
     }
     
     /* Estilos para el mapa */
@@ -121,20 +153,21 @@
   </script>
 </head>
 <body>
+  <!-- Botones fijos en esquinas superiores -->
+  <a href="../index.html" class="home-button" title="Volver a la galería">🏠</a>
+  <button class="view-toggle" onclick="toggleView()" title="Cambiar vista para Instagram">↻</button>
+  
   <div class="imagen-centro">
     <img id="panoramica" src="https://cdn.jsdelivr.net/gh/jlzig/panoramic219/hd/rayo_gorraiz_2010.jpg" alt="rayo gorraiz 2010">
     
-    <!-- Navegación sobre la imagen -->
+    <!-- Navegación sobre la imagen (solo anterior y siguiente) -->
     <div class="nav-overlay">
       <div class="nav-buttons">
         <a href="puerto_etxauri_2009.html" class="nav-button prev">⬅</a>
-        <a href="../index.html" class="home-button">🏠</a>
         <a href="semaforo_bares_2023.html" class="nav-button next">➡</a>
       </div>
     </div>
   </div>
-  
-  <button class="view-toggle" onclick="toggleView()" title="Cambiar vista para Instagram">↻</button>
   
   <div class="tags">
     <span class="tag">Panorámica 21:9</span>
