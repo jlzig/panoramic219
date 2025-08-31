@@ -85,7 +85,51 @@ h1 {
   opacity: 1;
 }
 
-/* 4. Estilos para navegación OVERLAY sobre la imagen */
+/* 4. Estilos para botones fijos en las esquinas */
+.home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  opacity: 0.7;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.view-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.7;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.home-button:hover, .view-toggle:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* 5. Navegación sobre la imagen */
 .nav-overlay {
   position: absolute;
   top: 0;
@@ -109,7 +153,7 @@ h1 {
   max-width: 100%;
 }
 
-.nav-button, .home-button {
+.nav-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,17 +179,13 @@ h1 {
   margin-left: auto;
 }
 
-.home-button {
-  font-size: 1.2rem;
-}
-
-.nav-button:hover, .home-button:hover {
+.nav-button:hover {
   opacity: 1;
   background-color: rgba(0,0,0,0.8);
   transform: scale(1.1);
 }
 
-/* 5. Contenedor de imagen individual */
+/* 6. Contenedor de imagen individual */
 .imagen-centro {
   margin: 1.5em auto;
   max-width: 100%;
@@ -191,7 +231,7 @@ h1 {
   color: #333;
 }
 
-/* 6. Media queries para pantallas pequeñas */
+/* 7. Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.5rem;
@@ -202,8 +242,8 @@ h1 {
     max-width: 200px;
   }
   
-  /* Ajustar botones de navegación para móvil */
-  .nav-button, .home-button {
+  /* Ajustar botones para móvil */
+  .nav-button, .home-button, .view-toggle {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
@@ -230,7 +270,7 @@ h1 {
   }
 }
 
-/* 7. Animaciones */
+/* 8. Animaciones */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -240,17 +280,17 @@ h1 {
   animation: fadeIn 0.5s ease-in;
 }
 
-/* Animación para botones de navegación - aparecen con fade */
+/* Animación para botones - aparecen con fade */
 @keyframes fadeInButtons {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 0.7; transform: scale(1); }
 }
 
-.nav-button, .home-button {
+.nav-button, .home-button, .view-toggle {
   animation: fadeInButtons 0.5s ease-in-out;
 }
 
-/* 8. Footer */
+/* 9. Footer */
 footer {
   margin-top: 30px;
   padding: 10px;
@@ -259,7 +299,7 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.2);
 }
 
-/* 9. Estilos para el mapa y la información de ubicación */
+/* 10. Estilos para el mapa y la información de ubicación */
 #map {
   border: 2px solid rgba(255,255,255,0.3);
   transition: all 0.3s ease;

@@ -35,11 +35,15 @@
       }
     }
     
-    /* Clase para rotación Instagram */
+    /* Clase para rotación Instagram - mejorada para mantener proporción completa */
     .instagram-view {
       transform: rotate(90deg);
       transform-origin: center;
-      max-height: 80vh;
+      max-width: none; /* Eliminamos restricción de anchura */
+      width: auto; /* Anchura automática */
+      height: 80vh; /* Altura fija basada en viewport */
+      display: block;
+      margin: 0 auto;
     }
     
     /* Botones de control */
@@ -85,6 +89,11 @@
       transition: all 0.3s ease;
     }
     
+    /* Ocultar botón Instagram en imágenes verticales */
+    .view-toggle.hidden {
+      display: none;
+    }
+    
     .view-toggle:hover {
       opacity: 1;
       transform: scale(1.1);
@@ -123,13 +132,23 @@
     // Aplicar la orientación guardada al cargar la página
     document.addEventListener('DOMContentLoaded', function() {
       const img = document.getElementById('panoramica');
-      const savedMode = localStorage.getItem('viewMode');
-      if (savedMode === 'instagram') {
-        img.classList.add('instagram-view');
+      const instaButton = document.getElementById('instaButton');
+      const isLandscape = true;
+      
+      // Si es vertical, ocultar el botón de Instagram
+      if (!isLandscape) {
+        if (instaButton) {
+          instaButton.classList.add('hidden');
+        }
+      } else {
+        // Solo para imágenes horizontales verificamos el modo guardado
+        const savedMode = localStorage.getItem('viewMode');
+        if (savedMode === 'instagram') {
+          img.classList.add('instagram-view');
+        }
       }
       
-      // Detección de orientación automática
-      const isLandscape = true;
+      // Añadir clase según orientación
       if (isLandscape) {
         img.classList.add('horizontal');
         
@@ -170,7 +189,7 @@ initMap();
 <body>
   <!-- Botones fijos en esquinas superiores -->
   <a href="../index.html" class="home-button" title="Volver a la galería">🏠</a>
-  <button class="view-toggle" onclick="toggleView()" title="Cambiar vista para Instagram">↻</button>
+  <button id="instaButton" class="view-toggle" onclick="toggleView()" title="Cambiar vista para Instagram">↻</button>
   
   <div class="imagen-centro">
     <img id="panoramica" src="https://cdn.jsdelivr.net/gh/jlzig/panoramic219/hd/20161204_IMG_3925-Pano_2016.jpg" alt="20161204 IMG 3925 Pano 2016">
@@ -192,7 +211,6 @@ initMap();
   
   
 <div class="location-info">
-  <p>📍 20161204 Img</p>
   <div id="map"></div>
 </div>
 
