@@ -3,8 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SemÃ¡foro de Bares</title>
+  <title>semaforo bares 2023</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Estilos específicos para esta imagen */
+    body {
+      background-color: #888888;
+    }
+    
+    /* Control de orientación para fotos horizontales/verticales */
+    @media screen and (max-width: 768px) {
+      .imagen-centro img.horizontal {
+        /* Para móvil en modo horizontal */
+        max-width: 100vw;
+        max-height: 100vh;
+      }
+      
+      .imagen-centro img.vertical {
+        /* Para móvil en modo vertical */
+        max-width: 100%;
+        max-height: 100vh;
+      }
+    }
+    
+    /* Clase para rotación Instagram */
+    .instagram-view {
+      transform: rotate(90deg);
+      transform-origin: center;
+      max-height: 80vh;
+    }
+    
+    /* Botón para intercambiar visualización */
+    .view-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 100;
+    }
+  </style>
+  <script>
+    function toggleView() {
+      const img = document.getElementById('panoramica');
+      if (img.classList.contains('instagram-view')) {
+        img.classList.remove('instagram-view');
+        localStorage.setItem('viewMode', 'normal');
+      } else {
+        img.classList.add('instagram-view');
+        localStorage.setItem('viewMode', 'instagram');
+      }
+    }
+    
+    // Aplicar la orientación guardada al cargar la página
+    document.addEventListener('DOMContentLoaded', function() {
+      const img = document.getElementById('panoramica');
+      const savedMode = localStorage.getItem('viewMode');
+      if (savedMode === 'instagram') {
+        img.classList.add('instagram-view');
+      }
+      
+      // Detección de orientación automática
+      const isLandscape = true;
+      if (isLandscape) {
+        img.classList.add('horizontal');
+        
+        // Si estamos en móvil, forzar orientación horizontal
+        if (window.matchMedia("(max-width: 768px)").matches) {
+          try {
+            if (screen.orientation && screen.orientation.lock) {
+              screen.orientation.lock('landscape').catch(e => console.log('No se pudo bloquear orientación:', e));
+            }
+          } catch(e) {
+            console.log('API de orientación no soportada:', e);
+          }
+        }
+      } else {
+        img.classList.add('vertical');
+      }
+    });
+  </script>
 </head>
 <body>
   <nav>
@@ -12,25 +96,17 @@
     <a href="../index.html">🏠 Volver a la galería</a>
     <a href="semaforo_bares_morning_2024.html">Siguiente ➡</a>
   </nav>
- 
+  
   <div class="imagen-centro">
-    <img src="https://cdn.jsdelivr.net/gh/jlzig/panoramic219/ld/semaforo_bares_2023.jpg" alt="SemÃ¡foro de Bares">
-  </div>
-  <h1>SemÃ¡foro de Bares</h1>
-
-  <div class="metadata">
-    <ul>
-      <li> 2023:08:17 20:01:50</li>
-     <li> Canon EOS 6D</li>
-     <li> EF24-70mm f/4L IS USM</li>
-     <li> 3440x1474</li>
-     <li> SemÃ¡foro de Bares</li>
-     <li> 21:9, panoramica composicion</li>
-     <li> 43.777736, -7.668097</li>
-     <li> https://staticmap.openstreetmap.de/staticmap.php?center=43.77773611111111,-7.668097222222222&zoom=15&size=400x200</li>
-      <li><strong>Etiquetas:</strong> <div class="tags"><span class="tag">21:9</span><span class="tag">panoramica composicion</span></div></li>
-    </ul>
+    <img id="panoramica" src="https://cdn.jsdelivr.net/gh/jlzig/panoramic219/hd/semaforo_bares_2023.jpg" alt="semaforo bares 2023">
   </div>
   
+  <button class="view-toggle" onclick="toggleView()" title="Cambiar vista para Instagram">↻</button>
+  
+  <div class="tags">
+    <span class="tag">Panorámica 21:9</span>
+    <span class="tag">2023</span>
+    <span class="tag">semaforo bares</span>
+  </div>
 </body>
 </html>
