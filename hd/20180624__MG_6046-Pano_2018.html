@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>20180624  MG 6046 Pano 2018</title>
   <link rel="stylesheet" href="../style.css">
+  
+  <!-- Leaflet CSS y JS para el mapa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+  
   <style>
     /* Estilos específicos para esta imagen */
     body {
@@ -48,6 +57,24 @@
       cursor: pointer;
       z-index: 100;
     }
+    
+    /* Estilos para el mapa */
+    #map {
+      height: 200px;
+      width: 100%;
+      max-width: 400px;
+      margin: 15px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    
+    .location-info {
+      margin: 10px auto;
+      background-color: rgba(255,255,255,0.1);
+      padding: 10px;
+      border-radius: 5px;
+      max-width: 400px;
+    }
   </style>
   <script>
     function toggleView() {
@@ -87,18 +114,40 @@
       } else {
         img.classList.add('vertical');
       }
+      
+      // Inicializar mapa si existen coordenadas
+      
+function initMap() {
+  const map = L.map('map').setView([43.38388833333333, -4.404166666666667], 13);
+  
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  
+  L.marker([43.38388833333333, -4.404166666666667])
+    .addTo(map)
+    .bindPopup("20180624  MG 6046 Pano 2018")
+    .openPopup();
+}
+
+initMap();
+
     });
   </script>
 </head>
 <body>
-  <nav>
-    <a href="20180624__MG_6024-Pano_2018.html">⬅ Anterior</a>
-    <a href="../index.html">🏠 Volver a la galería</a>
-    <a href="20200705_IMG_8059-HDR-Pano_2020.html">Siguiente ➡</a>
-  </nav>
-  
   <div class="imagen-centro">
     <img id="panoramica" src="https://cdn.jsdelivr.net/gh/jlzig/panoramic219/hd/20180624__MG_6046-Pano_2018.jpg" alt="20180624  MG 6046 Pano 2018">
+    
+    <!-- Navegación sobre la imagen -->
+    <div class="nav-overlay">
+      <div class="nav-buttons">
+        <a href="20180624__MG_6024-Pano_2018.html" class="nav-button prev">⬅</a>
+        <a href="../index.html" class="home-button">🏠</a>
+        <a href="20200705_IMG_8059-HDR-Pano_2020.html" class="nav-button next">➡</a>
+      </div>
+    </div>
   </div>
   
   <button class="view-toggle" onclick="toggleView()" title="Cambiar vista para Instagram">↻</button>
@@ -106,7 +155,14 @@
   <div class="tags">
     <span class="tag">Panorámica 21:9</span>
     <span class="tag">6046</span>
-    <span class="tag">20180624 MG</span>
+    <span class="tag">20180624 </span>
   </div>
+  
+  
+<div class="location-info">
+  <p>📍 20180624 </p>
+  <div id="map"></div>
+</div>
+
 </body>
 </html>

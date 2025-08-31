@@ -22,7 +22,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   padding: 0;
   margin: 0 auto;
   max-width: 1200px;
@@ -31,54 +31,162 @@ h1 {
 .galeria a {
   flex: 1 1 200px; /* cada elemento mínimo de 200px, luego se encogen/estiran */
   max-width: 300px;
+  /* Manteniendo relación de aspecto 21:9 */
+  position: relative;
+  padding-bottom: calc(9% / 21 * 100%); /* Relación de aspecto 21:9 */
+  height: 0;
+  overflow: hidden;
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.galeria a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .galeria img {
-  width: 100%;     /* ocupa todo el ancho del “flex item” */
-  height: auto;    /* mantén proporción */
-  border: 2px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* mantiene la relación de aspecto y rellena el espacio */
+  border: 2px solid transparent;
   border-radius: 4px;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
-.galeria img:hover {
+.galeria a:hover img {
   transform: scale(1.05);
 }
 
-/* 4. Estilos para navegación de la página individual */
-nav {
-  margin: 1em 0;
-  font-size: 1rem;
+/* Etiqueta de ubicación en miniaturas */
+.location-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
-nav a {
-  margin: 0 10px;
-  color: #aaddff;
+
+.galeria a:hover .location-tag {
+  opacity: 1;
+}
+
+/* 4. Estilos para navegación OVERLAY sobre la imagen */
+.nav-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Para que los clics pasen a través */
+  z-index: 5;
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  transform: translateY(-50%);
+  max-width: 100%;
+}
+
+.nav-button, .home-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border-radius: 50%;
   text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  pointer-events: auto; /* Rehabilitar eventos de clic */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-nav a:hover {
-  text-decoration: underline;
+
+.nav-button.prev {
+  margin-right: auto;
+}
+
+.nav-button.next {
+  margin-left: auto;
+}
+
+.home-button {
+  font-size: 1.2rem;
+}
+
+.nav-button:hover, .home-button:hover {
+  opacity: 1;
+  background-color: rgba(0,0,0,0.8);
+  transform: scale(1.1);
 }
 
 /* 5. Contenedor de imagen individual */
 .imagen-centro {
-  margin-bottom: 1.5em;
-}
-.imagen-centro img {
-  width: 100%;
+  margin: 1.5em auto;
   max-width: 100%;
-  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagen-centro img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 80vh; /* limite de altura para evitar scroll excesivo */
   border: none;
   background-color: transparent;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
+/* Estilos específicos para fotos panorámicas */
+.imagen-centro img.horizontal {
+  width: 100%;
+  max-height: 80vh; /* limitar altura */
+  object-fit: contain;
+}
+
+.imagen-centro img.vertical {
+  height: 90vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .tags {
-  margin-top: 8px;
+  margin-top: 15px;
+  padding: 5px;
 }
 .tag {
   display: inline-block;
-  background-color: #eee;
+  background-color: rgba(238,238,238,0.8);
   border-radius: 4px;
-  padding: 2px 6px;
-  margin-right: 5px;
+  padding: 3px 8px;
+  margin-right: 8px;
+  margin-bottom: 5px;
   font-size: 0.85em;
   color: #333;
 }
@@ -87,17 +195,90 @@ nav a:hover {
 @media (max-width: 768px) {
   h1 {
     font-size: 1.5rem;
+    margin: 0.5em 0;
   }
   .galeria a {
     flex: 1 1 150px;  /* en pantallas más pequeñas, cada miniatura mínimo 150px */
     max-width: 200px;
   }
-  nav a {
-    display: inline-block;
-    margin: 5px;
-    font-size: 0.9rem;
+  
+  /* Ajustar botones de navegación para móvil */
+  .nav-button, .home-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
-  .imagen-centro img {
-    width: 100%;
+  
+  /* Mejorar visualización en modo paisaje */
+  @media (orientation: landscape) {
+    .imagen-centro img.horizontal {
+      width: 100%;
+      max-height: 85vh;
+    }
+    
+    body {
+      padding: 5px;
+    }
   }
+  
+  /* Mejorar visualización en modo retrato */
+  @media (orientation: portrait) {
+    .imagen-centro img.vertical {
+      height: auto;
+      max-height: 85vh;
+    }
+  }
+}
+
+/* 7. Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.imagen-centro img {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Animación para botones de navegación - aparecen con fade */
+@keyframes fadeInButtons {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 0.7; transform: scale(1); }
+}
+
+.nav-button, .home-button {
+  animation: fadeInButtons 0.5s ease-in-out;
+}
+
+/* 8. Footer */
+footer {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 0.8rem;
+  color: #ccc;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* 9. Estilos para el mapa y la información de ubicación */
+#map {
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+}
+
+#map:hover {
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.location-info {
+  background-color: rgba(0,0,0,0.2);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.location-info p {
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  color: #fff;
 }

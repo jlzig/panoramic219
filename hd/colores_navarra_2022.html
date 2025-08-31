@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>colores navarra 2022</title>
   <link rel="stylesheet" href="../style.css">
+  
+  <!-- Leaflet CSS y JS para el mapa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+  
   <style>
     /* Estilos específicos para esta imagen */
     body {
@@ -48,6 +57,24 @@
       cursor: pointer;
       z-index: 100;
     }
+    
+    /* Estilos para el mapa */
+    #map {
+      height: 200px;
+      width: 100%;
+      max-width: 400px;
+      margin: 15px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    
+    .location-info {
+      margin: 10px auto;
+      background-color: rgba(255,255,255,0.1);
+      padding: 10px;
+      border-radius: 5px;
+      max-width: 400px;
+    }
   </style>
   <script>
     function toggleView() {
@@ -87,18 +114,40 @@
       } else {
         img.classList.add('vertical');
       }
+      
+      // Inicializar mapa si existen coordenadas
+      
+function initMap() {
+  const map = L.map('map').setView([42.84996833333334, -1.11329], 13);
+  
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  
+  L.marker([42.84996833333334, -1.11329])
+    .addTo(map)
+    .bindPopup("colores navarra 2022")
+    .openPopup();
+}
+
+initMap();
+
     });
   </script>
 </head>
 <body>
-  <nav>
-    <a href="archivo_navarra_2010.html">⬅ Anterior</a>
-    <a href="../index.html">🏠 Volver a la galería</a>
-    <a href="esparza_salazar_2022.html">Siguiente ➡</a>
-  </nav>
-  
   <div class="imagen-centro">
     <img id="panoramica" src="https://cdn.jsdelivr.net/gh/jlzig/panoramic219/hd/colores_navarra_2022.jpg" alt="colores navarra 2022">
+    
+    <!-- Navegación sobre la imagen -->
+    <div class="nav-overlay">
+      <div class="nav-buttons">
+        <a href="archivo_navarra_2010.html" class="nav-button prev">⬅</a>
+        <a href="../index.html" class="home-button">🏠</a>
+        <a href="esparza_salazar_2022.html" class="nav-button next">➡</a>
+      </div>
+    </div>
   </div>
   
   <button class="view-toggle" onclick="toggleView()" title="Cambiar vista para Instagram">↻</button>
@@ -106,7 +155,14 @@
   <div class="tags">
     <span class="tag">Panorámica 21:9</span>
     <span class="tag">2022</span>
-    <span class="tag">colores navarra</span>
+    <span class="tag">Colores Navarra</span>
   </div>
+  
+  
+<div class="location-info">
+  <p>📍 Colores Navarra</p>
+  <div id="map"></div>
+</div>
+
 </body>
 </html>
