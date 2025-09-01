@@ -1,3 +1,10 @@
+/* Añade estas líneas al inicio de tu style.css para diagnosticar problemas */
+.galeria img {
+  /* Asegúrate de que las imágenes tienen un tamaño visible */
+  min-height: 100px !important; 
+  min-width: 100px !important;
+  border: 2px solid red !important; /* Borde visible para depuración */
+}
 /* 1. Reset y tipografía básica */
 * {
   box-sizing: border-box;
