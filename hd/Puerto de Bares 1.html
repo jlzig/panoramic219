@@ -198,16 +198,30 @@
       transform: scale(1.05);
     }
     
-    /* Etiqueta del año */
-    .year-tag {
-      display: inline-block;
-      background-color: rgba(238,238,238,0.8);
-      border-radius: 4px;
-      padding: 3px 8px;
-      margin-right: 8px;
-      margin-bottom: 5px;
-      font-size: 0.85em;
-      color: #333;
+    /* Estilos para metadatos EXIF */
+    .exif-data {
+      margin: 20px auto;
+      max-width: 80%;
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      padding: 15px;
+    }
+    
+    .exif-table {
+      width: 100%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    
+    .exif-table td {
+      padding: 5px 10px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .exif-table td:first-child {
+      font-weight: bold;
+      width: 40%;
     }
   </style>
   <script>
@@ -331,8 +345,38 @@ initMap();
     </div>
   </div>
   
-  <!-- Etiqueta del año -->
-  <span class="year-tag">N/A</span>
+  <!-- Información EXIF -->
+  
+<div class="exif-data">
+  <table class="exif-table">
+    
+    <tr>
+      <td>Modelo</td>
+      <td>Canon EOS 50D</td>
+    </tr>
+    <tr>
+      <td>Lente</td>
+      <td>EF-S18-200mm f/3.5-5.6 IS</td>
+    </tr>
+    <tr>
+      <td>Tiempo exposición</td>
+      <td>1/400 s</td>
+    </tr>
+    <tr>
+      <td>Apertura</td>
+      <td>f/5.6</td>
+    </tr>
+    <tr>
+      <td>ISO</td>
+      <td>ISO 400</td>
+    </tr>
+    <tr>
+      <td>Distancia focal</td>
+      <td>155 mm</td>
+    </tr>
+  </table>
+</div>
+
   
   <!-- Palabras clave de Lightroom -->
   
