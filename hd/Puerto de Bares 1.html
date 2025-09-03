@@ -169,59 +169,33 @@
       }
     }
     
-    /* Estilos para metadatos EXIF */
-    .exif-data {
+    /* Estilos para las palabras clave */
+    .keywords-container {
       margin: 20px auto;
-      padding: 15px;
-      background-color: rgba(0,0,0,0.2);
-      border-radius: 8px;
-      max-width: 600px;
-      font-size: 0.9em;
-      line-height: 1.5;
+      max-width: 80%;
     }
     
-    .exif-data h3 {
-      margin-top: 0;
-      text-align: center;
-      border-bottom: 1px solid rgba(255,255,255,0.3);
-      padding-bottom: 8px;
-      margin-bottom: 12px;
+    .keywords-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
     }
     
-    .exif-data table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    
-    .exif-data td {
-      padding: 5px 10px;
-    }
-    
-    .exif-data td:first-child {
-      font-weight: bold;
-      width: 40%;
-    }
-    
-    /* Todas las etiquetas disponibles (debug) */
-    .all-tags {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: rgba(0,0,0,0.3);
-      border-radius: 5px;
-      font-size: 0.8em;
-      max-height: 150px;
-      overflow-y: auto;
-      color: #aaa;
-    }
-    
-    .all-tags h4 {
-      margin-top: 0;
+    .keyword {
+      display: inline-block;
+      background-color: rgba(50,50,50,0.7);
       color: #fff;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      transition: all 0.2s ease;
     }
     
-    .all-tags pre {
-      margin: 0;
-      white-space: pre-wrap;
+    .keyword:hover {
+      background-color: rgba(70,70,70,0.9);
+      transform: scale(1.05);
     }
   </style>
   <script>
@@ -357,122 +331,17 @@ initMap();
 </div>
 
   
-  <!-- Información EXIF -->
+  <!-- Palabras clave de Lightroom -->
   
-<div class="exif-data">
-  <h3>Datos técnicos</h3>
-  <table>
-    <tr>
-      <td>Modelo</td>
-      <td>Canon EOS 50D</td>
-    </tr>
-    <tr>
-      <td>Lente</td>
-      <td>EF-S18-200mm f/3.5-5.6 IS</td>
-    </tr>
-    <tr>
-      <td>Tiempo exposición</td>
-      <td>1/400 s</td>
-    </tr>
-    <tr>
-      <td>Apertura</td>
-      <td>f/5.6</td>
-    </tr>
-    <tr>
-      <td>ISO</td>
-      <td>ISO 400</td>
-    </tr>
-    <tr>
-      <td>Distancia focal</td>
-      <td>155 mm</td>
-    </tr>
-
-  </table>
-  
-  <div class="all-tags">
-    <h4>Etiquetas EXIF disponibles:</h4>
-    <pre>ApertureValue [Exif]: tuple
-ApertureValue: IFDRational
-Artist [0th]: bytes
-Artist: str
-BodySerialNumber [Exif]: bytes
-BodySerialNumber: str
-ColorSpace [Exif]: int
-ColorSpace: int
-Copyright [0th]: bytes
-Copyright: str
-CustomRendered [Exif]: int
-CustomRendered: int
-DateTime [0th]: bytes
-DateTime: str
-DateTimeDigitized [Exif]: bytes
-DateTimeDigitized: str
-DateTimeOriginal [Exif]: bytes
-DateTimeOriginal: str
-ExifOffset: int
-ExifTag [0th]: int
-ExifVersion [Exif]: bytes
-ExifVersion: bytes
-ExposureBiasValue [Exif]: tuple
-ExposureBiasValue: IFDRational
-ExposureMode [Exif]: int
-ExposureMode: int
-ExposureProgram [Exif]: int
-ExposureProgram: int
-ExposureTime [Exif]: tuple
-ExposureTime: IFDRational
-FNumber [Exif]: tuple
-FNumber: IFDRational
-Flash [Exif]: int
-Flash: int
-FocalLength [Exif]: tuple
-FocalLength: IFDRational
-FocalPlaneResolutionUnit [Exif]: int
-FocalPlaneResolutionUnit: int
-FocalPlaneXResolution [Exif]: tuple
-FocalPlaneXResolution: IFDRational
-FocalPlaneYResolution [Exif]: tuple
-FocalPlaneYResolution: IFDRational
-GPSInfo: dict
-GPSTag [0th]: int
-ISOSpeedRatings [Exif]: int
-ISOSpeedRatings: int
-ImageDescription [0th]: bytes
-ImageDescription: str
-LensModel [Exif]: bytes
-LensModel: str
-LensSpecification [Exif]: tuple
-LensSpecification: tuple
-Make [0th]: bytes
-Make: str
-MaxApertureValue [Exif]: tuple
-MaxApertureValue: IFDRational
-MeteringMode [Exif]: int
-MeteringMode: int
-Model [0th]: bytes
-Model: str
-OffsetTime [Exif]: bytes
-OffsetTime: str
-ResolutionUnit [0th]: int
-ResolutionUnit: int
-SceneCaptureType [Exif]: int
-SceneCaptureType: int
-ShutterSpeedValue [Exif]: tuple
-ShutterSpeedValue: IFDRational
-Software [0th]: bytes
-Software: str
-SubSecTimeDigitized [Exif]: bytes
-SubSecTimeOriginal [Exif]: bytes
-SubsecTimeDigitized: str
-SubsecTimeOriginal: str
-WhiteBalance [Exif]: int
-WhiteBalance: int
-XResolution [0th]: tuple
-XResolution: IFDRational
-YResolution [0th]: tuple
-YResolution: IFDRational</pre>
+<div class="keywords-container">
+  <div class="keywords-list">
+    <span class="keyword">panoramica composicion</span>
+    <span class="keyword">panoramica</span>
+    <span class="keyword">Porto de Bares</span>
+    <span class="keyword">21:9</span>
+    <span class="keyword">playa</span>
+    <span class="keyword">estaca</span>
   </div>
-
 </div>
 
 </body>
