@@ -180,7 +180,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 8px;
-      margin-top: 10px;
+      margin: 10px 0;
     }
     
     .keyword {
@@ -196,6 +196,18 @@
     .keyword:hover {
       background-color: rgba(70,70,70,0.9);
       transform: scale(1.05);
+    }
+    
+    /* Etiqueta del año */
+    .year-tag {
+      display: inline-block;
+      background-color: rgba(238,238,238,0.8);
+      border-radius: 4px;
+      padding: 3px 8px;
+      margin-right: 8px;
+      margin-bottom: 5px;
+      font-size: 0.85em;
+      color: #333;
     }
   </style>
   <script>
@@ -319,17 +331,8 @@ initMap();
     </div>
   </div>
   
-  <div class="tags">
-    <span class="tag">Panorámica 21:9</span>
-    <span class="tag">N/A</span>
-    
-  </div>
-  
-  
-<div class="location-info">
-  <div id="map"></div>
-</div>
-
+  <!-- Etiqueta del año -->
+  <span class="year-tag">N/A</span>
   
   <!-- Palabras clave de Lightroom -->
   
@@ -342,6 +345,13 @@ initMap();
     <span class="keyword">playa</span>
     <span class="keyword">estaca</span>
   </div>
+</div>
+
+  
+  <!-- Mapa -->
+  
+<div class="location-info">
+  <div id="map"></div>
 </div>
 
 </body>
