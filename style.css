@@ -111,6 +111,33 @@ h1 {
   transform: scale(1.1);
 }
 
+/* Botón de pantalla completa */
+.fullscreen-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.fullscreen-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 /* 5. Navegación sobre la imagen */
 .nav-overlay {
   position: absolute;
@@ -231,12 +258,30 @@ h1 {
   100% { transform: rotate(0deg); }
 }
 
-/* Mostrar mensaje solo en orientación vertical y en móviles */
+/* Mensajes específicos para cada tipo de rotación */
+.rotate-to-landscape {
+  display: none;
+}
+
+.rotate-to-portrait {
+  display: none;
+}
+
+/* Mostrar mensaje según orientación actual vs orientación deseada */
 @media screen and (orientation: portrait) and (max-width: 768px) {
-  .rotate-message {
+  .rotate-to-landscape {
     display: flex;
   }
-  .imagen-centro {
+  .imagen-horizontal-container {
+    visibility: hidden;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .rotate-to-portrait {
+    display: flex;
+  }
+  .imagen-vertical-container {
     visibility: hidden;
   }
 }
@@ -270,10 +315,19 @@ h1 {
   }
   
   /* Ajustar botones para móvil */
-  .nav-button, .home-button {
+  .nav-button, .home-button, .fullscreen-button {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
+  }
+  
+  /* Optimizar para pantalla completa en móvil */
+  body.fullscreen {
+    padding: 0;
+  }
+  
+  .fullscreen .imagen-centro {
+    margin: 0;
   }
 }
 
@@ -293,7 +347,7 @@ h1 {
   to { opacity: 0.7; transform: scale(1); }
 }
 
-.nav-button, .home-button {
+.nav-button, .home-button, .fullscreen-button {
   animation: fadeInButtons 0.5s ease-in-out;
 }
 
@@ -328,4 +382,38 @@ footer {
   border-radius: 8px;
   margin: 20px auto;
   max-width: 500px;
+}
+
+/* 11. Estilos para modo pantalla completa */
+:fullscreen {
+  background-color: #888888;
+  padding: 0;
+}
+
+:fullscreen .imagen-centro {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:fullscreen img {
+  max-height: 100vh;
+}
+
+/* Equivalentes para diferentes navegadores */
+:-webkit-full-screen {
+  background-color: #888888;
+  padding: 0;
+}
+
+:-moz-full-screen {
+  background-color: #888888;
+  padding: 0;
+}
+
+:-ms-fullscreen {
+  background-color: #888888;
+  padding: 0;
 }

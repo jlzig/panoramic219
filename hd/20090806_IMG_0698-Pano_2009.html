@@ -61,6 +61,33 @@
       opacity: 1;
       transform: scale(1.1);
     }
+
+    /* Botón de pantalla completa */
+    .fullscreen-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.7;
+      z-index: 100;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .fullscreen-button:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
     
     /* Estilos para el mapa */
     #map {
@@ -113,18 +140,37 @@
       100% { transform: rotate(0deg); }
     }
 
-    /* Mostrar mensaje solo en orientación vertical y en móviles */
+    /* Mensaje para rotación landscape (horizontal) */
+    .rotate-to-landscape {
+      display: none;
+    }
+
+    /* Mensaje para rotación portrait (vertical) */
+    .rotate-to-portrait {
+      display: none;
+    }
+
+    /* Mostrar mensaje según orientación actual vs orientación deseada */
     @media screen and (orientation: portrait) and (max-width: 768px) {
-      .rotate-message {
+      .rotate-to-landscape {
         display: flex;
       }
-      .imagen-centro {
+      .imagen-horizontal-container {
+        visibility: hidden;
+      }
+    }
+
+    @media screen and (orientation: landscape) and (max-width: 768px) {
+      .rotate-to-portrait {
+        display: flex;
+      }
+      .imagen-vertical-container {
         visibility: hidden;
       }
     }
   </style>
   <script>
-    // Aplicar la orientación automática al cargar la página
+    // Gestión de orientación y pantalla completa
     document.addEventListener('DOMContentLoaded', function() {
       const img = document.getElementById('panoramica');
       const isLandscape = true;
@@ -132,31 +178,84 @@
       // Añadir clase según orientación
       if (isLandscape) {
         img.classList.add('horizontal');
-        
-        // Si estamos en móvil, forzar orientación horizontal
-        if (window.matchMedia("(max-width: 768px)").matches) {
-          try {
-            // Intentar forzar orientación horizontal
-            if (screen.orientation && screen.orientation.lock) {
-              screen.orientation.lock('landscape')
-                .catch(e => console.log('No se pudo bloquear orientación:', e));
-            }
-          } catch(e) {
-            console.log('API de orientación no soportada:', e);
-          }
-        }
+        document.querySelector('.imagen-centro').classList.add('imagen-horizontal-container');
       } else {
         img.classList.add('vertical');
+        document.querySelector('.imagen-centro').classList.add('imagen-vertical-container');
+      }
+      
+      // Forzar orientación en móviles según formato de imagen
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        try {
+          // Si es horizontal -> landscape, si es vertical -> portrait
+          const orientationToLock = isLandscape ? 'landscape' : 'portrait';
+          
+          if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock(orientationToLock)
+              .catch(e => console.log('No se pudo bloquear orientación:', e));
+          }
+        } catch(e) {
+          console.log('API de orientación no soportada:', e);
+        }
+
+        // Activar pantalla completa automáticamente en móviles
+        document.body.addEventListener('click', function() {
+          if (!document.fullscreenElement) {
+            if (document.documentElement.requestFullscreen) {
+              document.documentElement.requestFullscreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+              document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) {
+              document.documentElement.msRequestFullscreen();
+            }
+          }
+        }, {once: true});
       }
       
       // Inicializar mapa si existen coordenadas
       
+function initMap() {
+  // Crear el mapa y centrarlo en las coordenadas
+  const map = L.map('map').setView([43.76923489666667, -7.677125038333333], 13);
+  
+  // Añadir la capa de OpenStreetMap (solo el fondo de mapa)
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  
+  // Ya no añadimos marcador ni popup
+}
+
+initMap();
+
     });
+
+    // Función para alternar modo pantalla completa
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        if (document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+          document.documentElement.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      }
+    }
   </script>
 </head>
 <body>
-  <!-- Mensaje para rotar el dispositivo en modo retrato -->
-  <div class="rotate-message">
+  <!-- Mensaje para rotar a landscape (cuando estamos en portrait) -->
+  <div class="rotate-message rotate-to-landscape">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
       <path d="M0 0h24v24H0z" fill="none"/>
       <path d="M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h1.5C23.44 4.84 18.29 0 12 0l-.66.03 3.81 3.81 1.33-1.32zm-6.25-.77c-.59-.59-1.54-.59-2.12 0L1.75 8.11c-.59.59-.59 1.54 0 2.12l12.02 12.02c.59.59 1.54.59 2.12 0l6.36-6.36c.59-.59.59-1.54 0-2.12L10.23 1.75zm4.6 19.44L2.81 9.17l6.36-6.36 12.02 12.02-6.36 6.36zm-7.31.29C4.25 19.94 1.91 16.76 1.55 13H.05C.56 19.16 5.71 24 12 24l.66-.03-3.81-3.81-1.33 1.32z"/>
@@ -165,8 +264,19 @@
     <p>Esta imagen se visualiza mejor en modo horizontal</p>
   </div>
 
-  <!-- Botón home en esquina superior izquierda -->
+  <!-- Mensaje para rotar a portrait (cuando estamos en landscape) -->
+  <div class="rotate-message rotate-to-portrait">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h1.5C23.44 4.84 18.29 0 12 0l-.66.03 3.81 3.81 1.33-1.32zm-6.25-.77c-.59-.59-1.54-.59-2.12 0L1.75 8.11c-.59.59-.59 1.54 0 2.12l12.02 12.02c.59.59 1.54.59 2.12 0l6.36-6.36c.59-.59.59-1.54 0-2.12L10.23 1.75zm4.6 19.44L2.81 9.17l6.36-6.36 12.02 12.02-6.36 6.36zm-7.31.29C4.25 19.94 1.91 16.76 1.55 13H.05C.56 19.16 5.71 24 12 24l.66-.03-3.81-3.81-1.33 1.32z"/>
+    </svg>
+    <h2>Por favor, gira tu dispositivo</h2>
+    <p>Esta imagen se visualiza mejor en modo vertical</p>
+  </div>
+
+  <!-- Botones fijos en esquinas superiores -->
   <a href="../index.html" class="home-button" title="Volver a la galería">🏠</a>
+  <button onclick="toggleFullscreen()" class="fullscreen-button" title="Pantalla completa">⛶</button>
   
   <div class="imagen-centro">
     <img id="panoramica" src="20090806_IMG_0698-Pano_2009.jpg" alt="20090806 IMG 0698 Pano 2009">
@@ -175,7 +285,7 @@
     <div class="nav-overlay">
       <div class="nav-buttons">
         
-        <a href="20090825_IMG_1137-Pano_2009.html" class="nav-button next">➡</a>
+        
       </div>
     </div>
   </div>
@@ -187,5 +297,9 @@
   </div>
   
   
+<div class="location-info">
+  <div id="map"></div>
+</div>
+
 </body>
 </html>
