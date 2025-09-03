@@ -1,21 +1,16 @@
-/* Añade estas líneas al inicio de tu style.css para diagnosticar problemas */
-.galeria img {
-  /* Asegúrate de que las imágenes tienen un tamaño visible */
-  min-height: 100px !important; 
-  min-width: 100px !important;
-  border: 2px solid red !important; /* Borde visible para depuración */
-}
 /* 1. Reset y tipografía básica */
 * {
   box-sizing: border-box;
-}
-body {
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: Arial, sans-serif;
   background-color: #888888;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 /* 2. Encabezado */
@@ -24,7 +19,7 @@ h1 {
   font-size: 2rem;
 }
 
-/* 3. Galería responsive usando flexbox */
+/* 3. IMPORTANTE: Galería con tamaños explícitos */
 .galeria {
   display: flex;
   flex-wrap: wrap;
@@ -36,17 +31,17 @@ h1 {
 }
 
 .galeria a {
-  flex: 1 1 200px; /* cada elemento mínimo de 200px, luego se encogen/estiran */
-  max-width: 300px;
-  /* Manteniendo relación de aspecto 21:9 */
+  /* Tamaños explícitos en lugar de flex y padding-bottom */
+  width: 230px;
+  height: 98px; /* Relación 21:9 aproximada */
   position: relative;
-  padding-bottom: calc(9% / 21 * 100%); /* Relación de aspecto 21:9 */
-  height: 0;
   overflow: hidden;
   text-decoration: none;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
+  display: block;
+  background-color: #666; /* Color de fondo mientras carga */
 }
 
 .galeria a:hover {
@@ -54,16 +49,15 @@ h1 {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* CRÍTICO: Asegurar que las imágenes sean visibles con tamaño adecuado */
 .galeria img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* mantiene la relación de aspecto y rellena el espacio */
+  object-fit: cover;
   border: 2px solid transparent;
   border-radius: 4px;
   transition: transform 0.3s ease;
+  display: block !important; /* Forzar display block */
 }
 
 .galeria a:hover img {
@@ -84,8 +78,7 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  opacity: 0.8;
 }
 
 .galeria a:hover .location-tag {
@@ -113,25 +106,7 @@ h1 {
   transition: all 0.3s ease;
 }
 
-.view-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  opacity: 0.7;
-  z-index: 100;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  transition: all 0.3s ease;
-}
-
-.home-button:hover, .view-toggle:hover {
+.home-button:hover {
   opacity: 1;
   transform: scale(1.1);
 }
@@ -223,6 +198,49 @@ h1 {
   object-fit: contain;
 }
 
+/* Mensaje de rotación para móviles */
+.rotate-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+  text-align: center;
+  padding: 20px;
+}
+
+.rotate-message svg {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  animation: rotate 2s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50% { transform: rotate(90deg); }
+  75% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Mostrar mensaje solo en orientación vertical y en móviles */
+@media screen and (orientation: portrait) and (max-width: 768px) {
+  .rotate-message {
+    display: flex;
+  }
+  .imagen-centro {
+    visibility: hidden;
+  }
+}
+
 .tags {
   margin-top: 15px;
   padding: 5px;
@@ -244,36 +262,18 @@ h1 {
     font-size: 1.5rem;
     margin: 0.5em 0;
   }
+  
+  /* También ajustamos las miniaturas para móviles */
   .galeria a {
-    flex: 1 1 150px;  /* en pantallas más pequeñas, cada miniatura mínimo 150px */
-    max-width: 200px;
+    width: 200px;
+    height: 85px;
   }
   
   /* Ajustar botones para móvil */
-  .nav-button, .home-button, .view-toggle {
+  .nav-button, .home-button {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
-  }
-  
-  /* Mejorar visualización en modo paisaje */
-  @media (orientation: landscape) {
-    .imagen-centro img.horizontal {
-      width: 100%;
-      max-height: 85vh;
-    }
-    
-    body {
-      padding: 5px;
-    }
-  }
-  
-  /* Mejorar visualización en modo retrato */
-  @media (orientation: portrait) {
-    .imagen-centro img.vertical {
-      height: auto;
-      max-height: 85vh;
-    }
   }
 }
 
@@ -293,7 +293,7 @@ h1 {
   to { opacity: 0.7; transform: scale(1); }
 }
 
-.nav-button, .home-button, .view-toggle {
+.nav-button, .home-button {
   animation: fadeInButtons 0.5s ease-in-out;
 }
 
@@ -310,6 +310,12 @@ footer {
 #map {
   border: 2px solid rgba(255,255,255,0.3);
   transition: all 0.3s ease;
+  height: 200px;
+  width: 100%;
+  max-width: 400px;
+  margin: 15px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 #map:hover {
@@ -322,10 +328,4 @@ footer {
   border-radius: 8px;
   margin: 20px auto;
   max-width: 500px;
-}
-
-.location-info p {
-  margin: 0 0 10px 0;
-  font-weight: bold;
-  color: #fff;
 }

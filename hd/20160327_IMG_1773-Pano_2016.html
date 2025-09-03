@@ -35,18 +35,7 @@
       }
     }
     
-    /* Clase para rotación Instagram - mejorada para mantener proporción completa */
-    .instagram-view {
-      transform: rotate(90deg);
-      transform-origin: center;
-      max-width: none; /* Eliminamos restricción de anchura */
-      width: auto; /* Anchura automática */
-      height: 80vh; /* Altura fija basada en viewport */
-      display: block;
-      margin: 0 auto;
-    }
-    
-    /* Botones de control */
+    /* Botón de home en esquina superior izquierda */
     .home-button {
       position: fixed;
       top: 20px;
@@ -73,32 +62,6 @@
       transform: scale(1.1);
     }
     
-    .view-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: rgba(0,0,0,0.6);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 20px;
-      cursor: pointer;
-      z-index: 100;
-      transition: all 0.3s ease;
-    }
-    
-    /* Ocultar botón Instagram en imágenes verticales */
-    .view-toggle.hidden {
-      display: none;
-    }
-    
-    .view-toggle:hover {
-      opacity: 1;
-      transform: scale(1.1);
-    }
-    
     /* Estilos para el mapa */
     #map {
       height: 200px;
@@ -116,37 +79,55 @@
       border-radius: 5px;
       max-width: 400px;
     }
-  </style>
-  <script>
-    function toggleView() {
-      const img = document.getElementById('panoramica');
-      if (img.classList.contains('instagram-view')) {
-        img.classList.remove('instagram-view');
-        localStorage.setItem('viewMode', 'normal');
-      } else {
-        img.classList.add('instagram-view');
-        localStorage.setItem('viewMode', 'instagram');
+
+    /* Mensaje de rotación de pantalla */
+    .rotate-message {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      color: white;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 1000;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .rotate-message svg {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+      animation: rotate 2s infinite ease-in-out;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(90deg); }
+      50% { transform: rotate(90deg); }
+      75% { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    /* Mostrar mensaje solo en orientación vertical y en móviles */
+    @media screen and (orientation: portrait) and (max-width: 768px) {
+      .rotate-message {
+        display: flex;
+      }
+      .imagen-centro {
+        visibility: hidden;
       }
     }
-    
-    // Aplicar la orientación guardada al cargar la página
+  </style>
+  <script>
+    // Aplicar la orientación automática al cargar la página
     document.addEventListener('DOMContentLoaded', function() {
       const img = document.getElementById('panoramica');
-      const instaButton = document.getElementById('instaButton');
       const isLandscape = true;
-      
-      // Si es vertical, ocultar el botón de Instagram
-      if (!isLandscape) {
-        if (instaButton) {
-          instaButton.classList.add('hidden');
-        }
-      } else {
-        // Solo para imágenes horizontales verificamos el modo guardado
-        const savedMode = localStorage.getItem('viewMode');
-        if (savedMode === 'instagram') {
-          img.classList.add('instagram-view');
-        }
-      }
       
       // Añadir clase según orientación
       if (isLandscape) {
@@ -155,8 +136,10 @@
         // Si estamos en móvil, forzar orientación horizontal
         if (window.matchMedia("(max-width: 768px)").matches) {
           try {
+            // Intentar forzar orientación horizontal
             if (screen.orientation && screen.orientation.lock) {
-              screen.orientation.lock('landscape').catch(e => console.log('No se pudo bloquear orientación:', e));
+              screen.orientation.lock('landscape')
+                .catch(e => console.log('No se pudo bloquear orientación:', e));
             }
           } catch(e) {
             console.log('API de orientación no soportada:', e);
@@ -187,12 +170,21 @@ initMap();
   </script>
 </head>
 <body>
-  <!-- Botones fijos en esquinas superiores -->
+  <!-- Mensaje para rotar el dispositivo en modo retrato -->
+  <div class="rotate-message">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M16.48 2.52c3.27 1.55 5.61 4.72 5.97 8.48h1.5C23.44 4.84 18.29 0 12 0l-.66.03 3.81 3.81 1.33-1.32zm-6.25-.77c-.59-.59-1.54-.59-2.12 0L1.75 8.11c-.59.59-.59 1.54 0 2.12l12.02 12.02c.59.59 1.54.59 2.12 0l6.36-6.36c.59-.59.59-1.54 0-2.12L10.23 1.75zm4.6 19.44L2.81 9.17l6.36-6.36 12.02 12.02-6.36 6.36zm-7.31.29C4.25 19.94 1.91 16.76 1.55 13H.05C.56 19.16 5.71 24 12 24l.66-.03-3.81-3.81-1.33 1.32z"/>
+    </svg>
+    <h2>Por favor, gira tu dispositivo</h2>
+    <p>Esta imagen se visualiza mejor en modo horizontal</p>
+  </div>
+
+  <!-- Botón home en esquina superior izquierda -->
   <a href="../index.html" class="home-button" title="Volver a la galería">🏠</a>
-  <button id="instaButton" class="view-toggle" onclick="toggleView()" title="Cambiar vista para Instagram">↻</button>
   
   <div class="imagen-centro">
-    <img id="panoramica" src="https://cdn.jsdelivr.net/gh/jlzig/panoramic219/hd/20160327_IMG_1773-Pano_2016.jpg" alt="20160327 IMG 1773 Pano 2016">
+    <img id="panoramica" src="20160327_IMG_1773-Pano_2016.jpg" alt="20160327 IMG 1773 Pano 2016">
     
     <!-- Navegación sobre la imagen (solo anterior y siguiente) -->
     <div class="nav-overlay">
