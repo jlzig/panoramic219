@@ -168,6 +168,46 @@
         visibility: hidden;
       }
     }
+    
+    /* Estilos para metadatos EXIF */
+    .exif-data {
+      margin: 20px auto;
+      padding: 15px;
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      max-width: 600px;
+      font-size: 0.9em;
+      line-height: 1.5;
+      text-align: left;
+    }
+    
+    .exif-data h3 {
+      margin-top: 0;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    
+    .exif-data table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .exif-data th {
+      text-align: left;
+      padding: 4px 8px;
+      background-color: rgba(0,0,0,0.2);
+    }
+    
+    .exif-data td {
+      padding: 4px 8px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .exif-data .exif-section {
+      margin-bottom: 15px;
+    }
   </style>
   <script>
     // Gestión de orientación y pantalla completa
@@ -299,6 +339,108 @@ initMap();
   
 <div class="location-info">
   <div id="map"></div>
+</div>
+
+  
+  <!-- Información EXIF -->
+  
+<div class="exif-data">
+  <h3>Información técnica</h3>
+  <div class="exif-section">
+    <table>
+      
+      <tr>
+        <td>Dimensiones</td>
+        <td>3440 × 1474 píxeles</td>
+      </tr>
+
+      <tr>
+        <td>Marca</td>
+        <td>Canon</td>
+      </tr>
+
+      <tr>
+        <td>Modelo</td>
+        <td>Canon EOS 50D</td>
+      </tr>
+
+      <tr>
+        <td>Lente</td>
+        <td>EF-S18-200mm f/3.5-5.6 IS</td>
+      </tr>
+
+      <tr>
+        <td>Fecha y hora</td>
+        <td>b'2009:08:06 18:53:49'</td>
+      </tr>
+
+      <tr>
+        <td>Tiempo exposición</td>
+        <td>1/400 s</td>
+      </tr>
+
+      <tr>
+        <td>Apertura</td>
+        <td>f/5.6</td>
+      </tr>
+
+      <tr>
+        <td>ISO</td>
+        <td>ISO 400</td>
+      </tr>
+
+      <tr>
+        <td>Compensación</td>
+        <td>0.0 EV</td>
+      </tr>
+
+      <tr>
+        <td>Modo exposición</td>
+        <td>0</td>
+      </tr>
+
+      <tr>
+        <td>Programa</td>
+        <td>No definido</td>
+      </tr>
+
+      <tr>
+        <td>Medición</td>
+        <td>Puntual</td>
+      </tr>
+
+      <tr>
+        <td>Distancia focal</td>
+        <td>155 mm</td>
+      </tr>
+
+      <tr>
+        <td>Resolución X</td>
+        <td>240</td>
+      </tr>
+
+      <tr>
+        <td>Resolución Y</td>
+        <td>240</td>
+      </tr>
+
+      <tr>
+        <td>Software</td>
+        <td>Adobe Photoshop Lightroom Classic 9.2 (Windows)</td>
+      </tr>
+
+      <tr>
+        <td>Artista</td>
+        <td>José Luis Díaz Carrero</td>
+      </tr>
+
+      <tr>
+        <td>Copyright</td>
+        <td>José Luis Díaz Carrero</td>
+      </tr>
+
+    </table>
+  </div>
 </div>
 
 </body>
