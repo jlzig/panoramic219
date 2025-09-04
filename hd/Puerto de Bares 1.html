@@ -168,6 +168,61 @@
         visibility: hidden;
       }
     }
+    
+    /* Estilos para las palabras clave */
+    .keywords-container {
+      margin: 20px auto;
+      max-width: 80%;
+    }
+    
+    .keywords-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    
+    .keyword {
+      display: inline-block;
+      background-color: rgba(50,50,50,0.7);
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      transition: all 0.2s ease;
+    }
+    
+    .keyword:hover {
+      background-color: rgba(70,70,70,0.9);
+      transform: scale(1.05);
+    }
+    
+    /* Estilos para metadatos EXIF */
+    .exif-data {
+      margin: 20px auto;
+      max-width: 80%;
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 8px;
+      padding: 15px;
+    }
+    
+    .exif-table {
+      width: 100%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    
+    .exif-table td {
+      padding: 5px 10px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .exif-table td:first-child {
+      font-weight: bold;
+      width: 40%;
+    }
   </style>
   <script>
     // Gestión de orientación y pantalla completa
@@ -290,16 +345,62 @@ initMap();
     </div>
   </div>
   
-  <div class="tags">
-    <span class="tag">Panorámica 21:9</span>
-    <span class="tag">N/A</span>
-    
+  <!-- Palabras clave de Lightroom -->
+  
+<div class="keywords-container">
+  <div class="keywords-list">
+    <span class="keyword">composición</span>
+    <span class="keyword">panorámica</span>
+    <span class="keyword">Puerto de Bares</span>
+    <span class="keyword">21:9</span>
+    <span class="keyword">playa</span>
+    <span class="keyword">estaca</span>
   </div>
+</div>
+
   
-  
+  <div class="footer-flex">
+      <div class="footer-map">
+        
 <div class="location-info">
   <div id="map"></div>
 </div>
 
+      </div>
+      <div class="footer-exif">
+        
+<div class="exif-data">
+  <table class="exif-table">
+    
+    <tr>
+      <td>Modelo</td>
+      <td>Canon EOS 50D</td>
+    </tr>
+    <tr>
+      <td>Lente</td>
+      <td>EF-S18-200mm f/3.5-5.6 IS</td>
+    </tr>
+    <tr>
+      <td>Tiempo exposición</td>
+      <td>1/400 s</td>
+    </tr>
+    <tr>
+      <td>Apertura</td>
+      <td>f/5.6</td>
+    </tr>
+    <tr>
+      <td>ISO</td>
+      <td>ISO 400</td>
+    </tr>
+    <tr>
+      <td>Distancia focal</td>
+      <td>155 mm</td>
+    </tr>
+  </table>
+</div>
+
+      </div>
+   </div>
+  
 </body>
 </html>
