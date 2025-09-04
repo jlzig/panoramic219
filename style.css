@@ -424,7 +424,7 @@ footer {
 #map {
   border: 2px solid rgba(255,255,255,0.3);
   transition: all 0.3s ease;
-  height: 200px;
+  height: 400px;
   width: 100%;
   max-width: 400px;
   margin: 15px auto;
