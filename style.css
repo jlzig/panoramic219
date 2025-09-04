@@ -1,419 +1,60 @@
-/* 1. Reset y tipografía básica */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #888888;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-/* 2. Encabezado */
-h1 {
-  margin: 1em 0;
-  font-size: 2rem;
-}
-
-/* 3. IMPORTANTE: Galería con tamaños explícitos */
-.galeria {
+.footer-flex {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 1200px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 30px auto 0 auto;
+  max-width: 700px;
 }
 
-.galeria a {
-  /* Tamaños explícitos en lugar de flex y padding-bottom */
-  width: 230px;
-  height: 98px; /* Relación 21:9 aproximada */
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  display: block;
-  background-color: #666; /* Color de fondo mientras carga */
+.footer-map {
+  flex: 0 0 240px;
+  min-width: 200px;
+  max-width: 240px;
+  /* El mapa ya tiene su propio tamaño */
 }
 
-.galeria a:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+.footer-exif {
+  flex: 1 1 300px;
+  max-width: 340px;
 }
 
-/* CRÍTICO: Asegurar que las imágenes sean visibles con tamaño adecuado */
-.galeria img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-  display: block !important; /* Forzar display block */
-}
-
-.galeria a:hover img {
-  transform: scale(1.05);
-}
-
-/* Etiqueta de ubicación en miniaturas */
-.location-tag {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.7);
-  color: white;
-  padding: 5px 8px;
-  font-size: 0.8rem;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  opacity: 0.8;
-}
-
-.galeria a:hover .location-tag {
-  opacity: 1;
-}
-
-/* 4. Estilos para botones fijos en las esquinas */
-.home-button {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0,0,0,0.6);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1.5rem;
-  opacity: 0.7;
-  z-index: 100;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  transition: all 0.3s ease;
-}
-
-.home-button:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/* Botón de pantalla completa */
-.fullscreen-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.7;
-  z-index: 100;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.fullscreen-button:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/* 5. Navegación sobre la imagen */
-.nav-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Para que los clics pasen a través */
-  z-index: 5;
-}
-
-.nav-buttons {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  transform: translateY(-50%);
-  max-width: 100%;
-}
-
-.nav-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0,0,0,0.6);
-  color: white;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  opacity: 0.7;
-  transition: all 0.3s ease;
-  pointer-events: auto; /* Rehabilitar eventos de clic */
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-.nav-button.prev {
-  margin-right: auto;
-}
-
-.nav-button.next {
-  margin-left: auto;
-}
-
-.nav-button:hover {
-  opacity: 1;
-  background-color: rgba(0,0,0,0.8);
-  transform: scale(1.1);
-}
-
-/* 6. Contenedor de imagen individual */
-.imagen-centro {
-  margin: 1.5em auto;
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.imagen-centro img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  max-height: 80vh; /* limite de altura para evitar scroll excesivo */
-  border: none;
-  background-color: transparent;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* Estilos específicos para fotos panorámicas */
-.imagen-centro img.horizontal {
-  width: 100%;
-  max-height: 80vh; /* limitar altura */
-  object-fit: contain;
-}
-
-.imagen-centro img.vertical {
-  height: 90vh;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-/* Mensaje de rotación para móviles */
-.rotate-message {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.9);
-  color: white;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 1000;
-  text-align: center;
-  padding: 20px;
-}
-
-.rotate-message svg {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-  animation: rotate 2s infinite ease-in-out;
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(90deg); }
-  50% { transform: rotate(90deg); }
-  75% { transform: rotate(0deg); }
-  100% { transform: rotate(0deg); }
-}
-
-/* Mensajes específicos para cada tipo de rotación */
-.rotate-to-landscape {
-  display: none;
-}
-
-.rotate-to-portrait {
-  display: none;
-}
-
-/* Mostrar mensaje según orientación actual vs orientación deseada */
-@media screen and (orientation: portrait) and (max-width: 768px) {
-  .rotate-to-landscape {
-    display: flex;
-  }
-  .imagen-horizontal-container {
-    visibility: hidden;
-  }
-}
-
-@media screen and (orientation: landscape) and (max-width: 768px) {
-  .rotate-to-portrait {
-    display: flex;
-  }
-  .imagen-vertical-container {
-    visibility: hidden;
-  }
-}
-
-.tags {
-  margin-top: 15px;
-  padding: 5px;
-}
-.tag {
-  display: inline-block;
-  background-color: rgba(238,238,238,0.8);
-  border-radius: 4px;
-  padding: 3px 8px;
-  margin-right: 8px;
-  margin-bottom: 5px;
-  font-size: 0.85em;
-  color: #333;
-}
-
-/* 7. Media queries para pantallas pequeñas */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-    margin: 0.5em 0;
-  }
-  
-  /* También ajustamos las miniaturas para móviles */
-  .galeria a {
-    width: 200px;
-    height: 85px;
-  }
-  
-  /* Ajustar botones para móvil */
-  .nav-button, .home-button, .fullscreen-button {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-  
-  /* Optimizar para pantalla completa en móvil */
-  body.fullscreen {
-    padding: 0;
-  }
-  
-  .fullscreen .imagen-centro {
-    margin: 0;
-  }
-}
-
-/* 8. Animaciones */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.imagen-centro img {
-  animation: fadeIn 0.5s ease-in;
-}
-
-/* Animación para botones - aparecen con fade */
-@keyframes fadeInButtons {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 0.7; transform: scale(1); }
-}
-
-.nav-button, .home-button, .fullscreen-button {
-  animation: fadeInButtons 0.5s ease-in-out;
-}
-
-/* 9. Footer */
-footer {
-  margin-top: 30px;
-  padding: 10px;
-  font-size: 0.8rem;
-  color: #ccc;
-  border-top: 1px solid rgba(255,255,255,0.2);
-}
-
-/* 10. Estilos para el mapa y la información de ubicación */
-#map {
-  border: 2px solid rgba(255,255,255,0.3);
-  transition: all 0.3s ease;
-  height: 200px;
-  width: 100%;
-  max-width: 400px;
-  margin: 15px auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-#map:hover {
-  box-shadow: 0 0 15px rgba(255,255,255,0.3);
-}
-
-.location-info {
+.exif-data {
   background-color: rgba(0,0,0,0.2);
-  padding: 10px;
   border-radius: 8px;
-  margin: 20px auto;
-  max-width: 500px;
-}
-
-/* 11. Estilos para modo pantalla completa */
-:fullscreen {
-  background-color: #888888;
-  padding: 0;
-}
-
-:fullscreen .imagen-centro {
+  padding: 15px;
   margin: 0;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-:fullscreen img {
-  max-height: 100vh;
+.exif-table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: left;
 }
 
-/* Equivalentes para diferentes navegadores */
-:-webkit-full-screen {
-  background-color: #888888;
-  padding: 0;
+.exif-table td {
+  padding: 5px 10px;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-:-moz-full-screen {
-  background-color: #888888;
-  padding: 0;
+.exif-table td:first-child {
+  font-weight: bold;
+  width: 40%;
 }
 
-:-ms-fullscreen {
-  background-color: #888888;
-  padding: 0;
+@media (max-width: 700px) {
+  .footer-flex {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 96vw;
+  }
+  .footer-map,
+  .footer-exif {
+    max-width: 100%;
+    width: 100%;
+  }
 }
