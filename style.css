@@ -32,8 +32,8 @@ h1 {
 
 .galeria a {
   /* Tamaños explícitos en lugar de flex y padding-bottom */
-  width: 230px;
-  height: 98px; /* Relación 21:9 aproximada */
+  width: 210px;
+  height: 90px; /* Relación 21:9 aproximada */
   position: relative;
   overflow: hidden;
   text-decoration: none;
@@ -360,6 +360,56 @@ h1 {
   gap: 30px;
   margin: 30px auto 0 auto;
   max-width: 700px;
+}
+
+.footer-map {
+  flex: 0 0 240px;
+  min-width: 200px;
+  max-width: 240px;
+}
+
+.footer-exif {
+  flex: 1 1 300px;
+  max-width: 340px;
+}
+
+.exif-data {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.exif-table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.exif-table td {
+  padding: 5px 10px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.exif-table td:first-child {
+  font-weight: bold;
+  width: 40%;
+}
+
+@media (max-width: 700px) {
+  .footer-flex {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 96vw;
+  }
+  .footer-map,
+  .footer-exif {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 footer {
