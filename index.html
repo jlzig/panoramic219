@@ -3,16 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Galería</title>
+  <title>Galería Panorámica 21:9</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    // Solicitar pantalla completa al cargar en móviles
+    document.addEventListener('DOMContentLoaded', function() {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.body.addEventListener('click', function() {
+          if (!document.fullscreenElement) {
+            if (document.documentElement.requestFullscreen) {
+              document.documentElement.requestFullscreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+              document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) {
+              document.documentElement.msRequestFullscreen();
+            }
+          }
+        }, {once: true});
+      }
+    });
+  </script>
 </head>
 <body>
-  <h1>Galería</h1>
+  <h1>Galería Panorámica 21:9</h1>
   <div class="galeria">
-    <a href="hd/PuertoGijon.html"><img src="ld/PuertoGijon.jpg" alt="PuertoGijon"></a>
-    <a href="hd/Sanvicente1.html"><img src="ld/Sanvicente1.jpg" alt="Sanvicente1"></a>
-    <a href="hd/puertodebares1.html"><img src="ld/puertodebares1.jpg" alt="puertodebares1"></a>
-    <a href="hd/riabarquero.html"><img src="ld/riabarquero.jpg" alt="riabarquero"></a>
+    <a href="hd/PuertoGijon.html"><img src="ld/PuertoGijon.jpg" alt="PuertoGijon" loading="lazy"><span class="location-tag"></span></a>
+    <a href="hd/Sanvicente1.html"><img src="ld/Sanvicente1.jpg" alt="Sanvicente1" loading="lazy"><span class="location-tag"></span></a>
+    <a href="hd/puertodebares1.html"><img src="ld/puertodebares1.jpg" alt="puertodebares1" loading="lazy"><span class="location-tag"></span></a>
+    <a href="hd/riabarquero.html"><img src="ld/riabarquero.jpg" alt="riabarquero" loading="lazy"><span class="location-tag"></span></a>
   </div>
+  <footer>
+    <p>© 2025 José Luis Díaz Carrero    @panoramic219 | 21/09/2025 01:07</p>
+  </footer>
 </body>
 </html>
