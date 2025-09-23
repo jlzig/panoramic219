@@ -6,3 +6,221 @@ Imagen LD correspondiente encontrada: Ortegal.jpg
 --- Resultado ---
 HD movida a: C:\Users\jl\OneDrive\Python\panoramic219\hd\Ortegal.jpg
 LD movida a: C:\Users\jl\OneDrive\Python\panoramic219\ld\Ortegal.jpg
+[main 959d218]  ActualizaciÃ³n automÃ¡tica 23/09/2025 18:32
+ 195 files changed, 1121 insertions(+), 19 deletions(-)
+ create mode 100644 buffer/LD/Arga-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/Arga.jpg
+ create mode 100644 buffer/LD/Gorraiz-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/Ortegal-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/PuertoGijon.jpg
+ create mode 100644 buffer/LD/PzaCastillo-2-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/PzaCastillo-2.jpg
+ create mode 100644 buffer/LD/PzaCastillo-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/PzaCastillo.jpg
+ create mode 100644 buffer/LD/SanVicentedelaBarquera-2-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/SanVicentedelaBarquera-2.jpg
+ create mode 100644 buffer/LD/SanVicentedelaBarquera.jpg
+ create mode 100644 buffer/LD/Sanvicente1.jpg
+ create mode 100644 buffer/LD/abbadia-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/abbadia.jpg
+ create mode 100644 buffer/LD/aguillons-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/aguillons.jpg
+ create mode 100644 buffer/LD/almudena-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/almudena.jpg
+ create mode 100644 buffer/LD/archivonavarra-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/banco-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/banco.jpg
+ create mode 100644 buffer/LD/colmenar-1-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/colmenar-1.jpg
+ create mode 100644 buffer/LD/colmenar-2-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/colmenar-2.jpg
+ create mode 100644 buffer/LD/colmenar-3-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/colmenar-3.jpg
+ create mode 100644 buffer/LD/colmenar-6-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/colmenar-6.jpg
+ create mode 100644 buffer/LD/congreso1-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/congreso1.jpg
+ create mode 100644 buffer/LD/congreso2-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/congreso2.jpg
+ create mode 100644 buffer/LD/fragas-1-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/fragas-1.jpg
+ create mode 100644 buffer/LD/fragas-2-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/fragas-2.jpg
+ create mode 100644 buffer/LD/fragas-3-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/fragas-3.jpg
+ create mode 100644 buffer/LD/fragas-4-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/fragas-4.jpg
+ create mode 100644 buffer/LD/garrick-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/garrick.jpg
+ create mode 100644 buffer/LD/isal-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/isal.jpg
+ create mode 100644 buffer/LD/izaga-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/montejurra-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/montejurra.jpg
+ create mode 100644 buffer/LD/ortigueira-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/ortigueira.jpg
+ create mode 100644 "buffer/LD/oto\303\261o-Panoramic219LD_buffer-2.jpg"
+ create mode 100644 "buffer/LD/oto\303\261o.jpg"
+ create mode 100644 buffer/LD/paris1-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/paris1.jpg
+ create mode 100644 buffer/LD/picon-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/picon.jpg
+ create mode 100644 buffer/LD/puertasol-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/puertasol.jpg
+ create mode 100644 buffer/LD/puertodebares1.jpg
+ create mode 100644 buffer/LD/puertodebares2-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/puertodebares2.jpg
+ create mode 100644 buffer/LD/riabarquero3-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/riabarquero3.jpg
+ create mode 100644 buffer/LD/riasaltas-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/riasaltas.jpg
+ create mode 100644 buffer/LD/roncesvalles-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/roncesvalles.jpg
+ create mode 100644 buffer/LD/roquenublo-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/roquenublo.jpg
+ create mode 100644 buffer/LD/salamanca-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/salamanca.jpg
+ create mode 100644 buffer/LD/sanlorenzo-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/sanlorenzo.jpg
+ create mode 100644 buffer/LD/semaforo-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/semaforo.jpg
+ create mode 100644 buffer/LD/semaforo2-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/ss-4-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/ss-4.jpg
+ create mode 100644 buffer/LD/ss-5-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/ss-5.jpg
+ create mode 100644 buffer/LD/ss-6-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/ss-6.jpg
+ create mode 100644 buffer/LD/thames.jpg
+ create mode 100644 buffer/LD/towerbridge-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/towerbridge.jpg
+ create mode 100644 buffer/LD/trafalgar-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/trafalgar.jpg
+ create mode 100644 buffer/LD/turquesa-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/turquesa.jpg
+ create mode 100644 buffer/LD/zugarramurdi-Panoramic219LD_buffer-2.jpg
+ create mode 100644 buffer/LD/zugarramurdi.jpg
+ create mode 100644 buffer/hd/Arga.jpg
+ create mode 100644 buffer/hd/PuertoGijon.jpg
+ create mode 100644 buffer/hd/PzaCastillo-2.jpg
+ create mode 100644 buffer/hd/PzaCastillo.jpg
+ create mode 100644 buffer/hd/SanVicentedelaBarquera-2.jpg
+ create mode 100644 buffer/hd/SanVicentedelaBarquera.jpg
+ create mode 100644 buffer/hd/Sanvicente1.jpg
+ create mode 100644 buffer/hd/abbadia.jpg
+ create mode 100644 buffer/hd/aguillons.jpg
+ create mode 100644 buffer/hd/almudena.jpg
+ create mode 100644 buffer/hd/banco.jpg
+ create mode 100644 buffer/hd/colmenar-1.jpg
+ create mode 100644 buffer/hd/colmenar-2.jpg
+ create mode 100644 buffer/hd/colmenar-3.jpg
+ create mode 100644 buffer/hd/colmenar-6.jpg
+ create mode 100644 buffer/hd/congreso1.jpg
+ create mode 100644 buffer/hd/congreso2.jpg
+ create mode 100644 buffer/hd/fragas-1.jpg
+ create mode 100644 buffer/hd/fragas-2.jpg
+ create mode 100644 buffer/hd/fragas-3.jpg
+ create mode 100644 buffer/hd/fragas-4.jpg
+ create mode 100644 buffer/hd/garrick.jpg
+ create mode 100644 buffer/hd/isal.jpg
+ create mode 100644 buffer/hd/montejurra.jpg
+ create mode 100644 buffer/hd/ortigueira.jpg
+ create mode 100644 "buffer/hd/oto\303\261o.jpg"
+ create mode 100644 buffer/hd/paris1.jpg
+ create mode 100644 buffer/hd/picon.jpg
+ create mode 100644 buffer/hd/puertasol.jpg
+ create mode 100644 buffer/hd/puertodebares1.jpg
+ create mode 100644 buffer/hd/puertodebares2.jpg
+ create mode 100644 buffer/hd/riabarquero3.jpg
+ create mode 100644 buffer/hd/riasaltas.jpg
+ create mode 100644 buffer/hd/roncesvalles.jpg
+ create mode 100644 buffer/hd/roquenublo.jpg
+ create mode 100644 buffer/hd/salamanca.jpg
+ create mode 100644 buffer/hd/sanlorenzo.jpg
+ create mode 100644 buffer/hd/semaforo.jpg
+ create mode 100644 buffer/hd/ss-4.jpg
+ create mode 100644 buffer/hd/ss-5.jpg
+ create mode 100644 buffer/hd/ss-6.jpg
+ create mode 100644 buffer/hd/thames.jpg
+ create mode 100644 buffer/hd/towerbridge.jpg
+ create mode 100644 buffer/hd/trafalgar.jpg
+ create mode 100644 buffer/hd/turquesa.jpg
+ create mode 100644 buffer/hd/zugarramurdi.jpg
+ create mode 100644 hd/Gorraiz.html
+ create mode 100644 hd/Gorraiz.jpg
+ create mode 100644 hd/Ortegal.html
+ create mode 100644 hd/Ortegal.jpg
+ create mode 100644 hd/archivonavarra.html
+ create mode 100644 hd/archivonavarra.jpg
+ create mode 100644 hd/izaga.html
+ create mode 100644 hd/izaga.jpg
+ create mode 100644 hd/semaforo2.html
+ create mode 100644 hd/semaforo2.jpg
+ create mode 100644 hd/videos_generados/PuertoGijon.mp4
+ create mode 100644 hd/videos_generados/Sanvicente1.mp4
+ create mode 100644 hd/videos_generados/puertodebares1.mp4
+ create mode 100644 hd/videos_generados/riabarquero.mp4
+ create mode 100644 ld/Gorraiz.jpg
+ create mode 100644 ld/Ortegal.jpg
+ create mode 100644 ld/archivonavarra.jpg
+ create mode 100644 ld/izaga.jpg
+ create mode 100644 ld/semaforo2.jpg
+ delete mode 100644 ld/temp_PuertoGijon.mp4.jpg
+ delete mode 100644 ld/temp_Sanvicente1.mp4.jpg
+ delete mode 100644 ld/temp_puertodebares1.mp4.jpg
+ delete mode 100644 ld/temp_riabarquero.mp4.jpg
+ delete mode 100644 ld/videos_generados/PuertoGijon.mp4
+ delete mode 100644 ld/videos_generados/PuertoGijon.mp4.jpg
+ delete mode 100644 ld/videos_generados/Sanvicente1.mp4
+ delete mode 100644 ld/videos_generados/Sanvicente1.mp4.jpg
+ delete mode 100644 ld/videos_generados/puertodebares1.mp4
+ delete mode 100644 ld/videos_generados/puertodebares1.mp4.jpg
+ delete mode 100644 ld/videos_generados/riabarquero.mp4
+ delete mode 100644 ld/videos_generados/riabarquero.mp4.jpg
+ create mode 100644 logs/run_23-09-2025_12-42.log
+ create mode 100644 logs/run_23-09-2025_12-43.log
+ create mode 100644 logs/run_23-09-2025_15-20.log
+ create mode 100644 logs/run_23-09-2025_15-21.log
+ create mode 100644 logs/run_23-09-2025_15-24.log
+ create mode 100644 logs/run_23-09-2025_15-27.log
+ create mode 100644 logs/run_23-09-2025_15-33.log
+ create mode 100644 logs/run_23-09-2025_15-41.log
+ create mode 100644 logs/run_23-09-2025_17-35.log
+ create mode 100644 logs/run_23-09-2025_17-39.log
+ create mode 100644 logs/run_23-09-2025_17-40.log
+ create mode 100644 logs/run_23-09-2025_17-47.log
+ create mode 100644 logs/run_23-09-2025_18-32.log
+To https://github.com/jlzig/panoramic219
+   bb2b683..959d218  main -> main
+ Generando web panorámica 21:9
+ Directorio de trabajo: C:/Users/jl/OneDrive/Python/panoramic219
+ Verificando estructura de directorios:
+ Imágenes encontradas: 9 en HD, 9 en LD
+ Generando archivo style.css completo...
+ Se generó style.css exitosamente
+ Buscando imágenes en HD...
+ Encontradas 9 imágenes en HD.
+Método 1b: Encontradas 5 palabras clave en Gorraiz.jpg
+Método 1b: Encontradas 4 palabras clave en Ortegal.jpg
+Método 1b: Encontradas 5 palabras clave en PuertoGijon.jpg
+Método 1b: Encontradas 4 palabras clave en Sanvicente1.jpg
+Método 1b: Encontradas 5 palabras clave en archivonavarra.jpg
+Método 1b: Encontradas 3 palabras clave en izaga.jpg
+Método 1b: Encontradas 6 palabras clave en puertodebares1.jpg
+Método 1b: Encontradas 7 palabras clave en riabarquero.jpg
+Método 1b: Encontradas 4 palabras clave en semaforo2.jpg
+ Se procesaron 9 imágenes con sus miniaturas
+ Generando index.html...
+ Se generó index.html con 9 imágenes
+ Generando páginas HTML individuales...
+  Generado Gorraiz.html  con EXIF  con mapa  con 5 palabras clave
+  Generado Ortegal.html  con EXIF  con mapa  con 4 palabras clave
+  Generado PuertoGijon.html  con EXIF  con mapa  con 5 palabras clave
+  Generado Sanvicente1.html  con EXIF  con mapa  con 4 palabras clave
+  Generado archivonavarra.html  con EXIF  con mapa  con 5 palabras clave
+  Generado izaga.html  con EXIF  con mapa  con 3 palabras clave
+  Generado puertodebares1.html  con EXIF  con mapa  con 6 palabras clave
+  Generado riabarquero.html  con EXIF  con mapa  con 7 palabras clave
+  Generado semaforo2.html  con EXIF  con mapa  con 4 palabras clave
+ Subiendo a GitHub...
+ Push completado.
