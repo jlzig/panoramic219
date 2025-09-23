@@ -1,0 +1,26 @@
+Imagen HD seleccionada: semaforo2.jpg
+Imagen LD correspondiente encontrada: semaforo2.jpg
+
+--- Moviendo archivos ---
+
+--- Resultado ---
+HD movida a: C:\Users\jl\OneDrive\Python\panoramic219\hd\semaforo2.jpg
+LD movida a: C:\Users\jl\OneDrive\Python\panoramic219\ld\semaforo2.jpg
+ Generando web panorámica 21:9
+ Directorio de trabajo: C:/Users/jl/OneDrive/Python/panoramic219
+ Verificando estructura de directorios:
+ Imágenes encontradas: 8 en HD, 8 en LD
+Traceback (most recent call last):
+  File "C:\Users\jl\OneDrive\Python\panoramic219_code.py", line 1449, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\jl\OneDrive\Python\panoramic219_code.py", line 1430, in main
+    if not generar_archivo_css():
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\jl\OneDrive\Python\panoramic219_code.py", line 836, in generar_archivo_css
+    print("\U0001f3a8 Generando archivo style.css completo...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f3a8' in position 0: character maps to <undefined>
