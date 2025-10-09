@@ -6,3 +6,115 @@ Imagen LD correspondiente encontrada: ss-4.jpg
 --- Resultado ---
 HD movida a: C:\Users\jl\OneDrive\Python\panoramic219\hd\ss-4.jpg
 LD movida a: C:\Users\jl\OneDrive\Python\panoramic219\ld\ss-4.jpg
+[main cb39696]  ActualizaciÃ³n automÃ¡tica 27/09/2025 08:00
+ 186 files changed, 224 insertions(+), 377 deletions(-)
+ create mode 100644 buffer/HD_SM/Arga.jpg
+ create mode 100644 buffer/HD_SM/Gorraiz.jpg
+ create mode 100644 buffer/HD_SM/Ortegal.jpg
+ create mode 100644 buffer/HD_SM/PuertoGijon.jpg
+ create mode 100644 buffer/HD_SM/PzaCastillo-2.jpg
+ create mode 100644 buffer/HD_SM/PzaCastillo.jpg
+ create mode 100644 buffer/HD_SM/SanVicentedelaBarquera-2.jpg
+ create mode 100644 buffer/HD_SM/SanVicentedelaBarquera.jpg
+ create mode 100644 buffer/HD_SM/Sanvicente1.jpg
+ create mode 100644 buffer/HD_SM/abbadia.jpg
+ create mode 100644 buffer/HD_SM/aguillons.jpg
+ create mode 100644 buffer/HD_SM/almudena.jpg
+ create mode 100644 buffer/HD_SM/archivonavarra.jpg
+ create mode 100644 buffer/HD_SM/banco.jpg
+ create mode 100644 buffer/HD_SM/colmenar-1.jpg
+ create mode 100644 buffer/HD_SM/colmenar-2.jpg
+ create mode 100644 buffer/HD_SM/colmenar-3.jpg
+ create mode 100644 buffer/HD_SM/colmenar-6.jpg
+ create mode 100644 buffer/HD_SM/congreso1.jpg
+ create mode 100644 buffer/HD_SM/congreso2.jpg
+ create mode 100644 buffer/HD_SM/fragas-1.jpg
+ create mode 100644 buffer/HD_SM/fragas-2.jpg
+ create mode 100644 buffer/HD_SM/fragas-3.jpg
+ create mode 100644 buffer/HD_SM/fragas-4.jpg
+ create mode 100644 buffer/HD_SM/garrick.jpg
+ create mode 100644 buffer/HD_SM/isal.jpg
+ create mode 100644 buffer/HD_SM/izaga.jpg
+ create mode 100644 buffer/HD_SM/montejurra.jpg
+ create mode 100644 buffer/HD_SM/ortigueira.jpg
+ create mode 100644 "buffer/HD_SM/oto\303\261o.jpg"
+ create mode 100644 buffer/HD_SM/paris1.jpg
+ create mode 100644 buffer/HD_SM/picon.jpg
+ create mode 100644 buffer/HD_SM/puertasol.jpg
+ create mode 100644 buffer/HD_SM/puertodebares1.jpg
+ create mode 100644 buffer/HD_SM/puertodebares2.jpg
+ create mode 100644 buffer/HD_SM/riabarquero.jpg
+ create mode 100644 buffer/HD_SM/riabarquero3.jpg
+ create mode 100644 buffer/HD_SM/riasaltas.jpg
+ create mode 100644 buffer/HD_SM/roncesvalles.jpg
+ create mode 100644 buffer/HD_SM/roquenublo.jpg
+ create mode 100644 buffer/HD_SM/salamanca.jpg
+ create mode 100644 buffer/HD_SM/sanlorenzo.jpg
+ create mode 100644 buffer/HD_SM/semaforo.jpg
+ create mode 100644 buffer/HD_SM/semaforo2.jpg
+ create mode 100644 buffer/HD_SM/ss-4.jpg
+ create mode 100644 buffer/HD_SM/ss-5.jpg
+ create mode 100644 buffer/HD_SM/ss-6.jpg
+ create mode 100644 buffer/HD_SM/thames.jpg
+ create mode 100644 buffer/HD_SM/towerbridge.jpg
+ create mode 100644 buffer/HD_SM/trafalgar.jpg
+ create mode 100644 buffer/HD_SM/turquesa.jpg
+ create mode 100644 buffer/HD_SM/zugarramurdi.jpg
+ delete mode 100644 buffer/LD/ss-4.jpg
+ create mode 100644 buffer/hd/PuertoGijon.jpg
+ create mode 100644 buffer/hd/Sanvicente1.jpg
+ create mode 100644 buffer/hd/congreso1.jpg
+ create mode 100644 buffer/hd/puertodebares1.jpg
+ create mode 100644 buffer/hd/riabarquero.jpg
+ create mode 100644 hd/ss-4.html
+ rename {buffer/hd => hd}/ss-4.jpg (99%)
+ create mode 100644 hd/videos_generados/congreso1.mp4
+ create mode 100644 hd/videos_generados/congreso1.mp4.jpg
+ create mode 100644 ld/ss-4.jpg
+ delete mode 100644 logs/run_23-09-2025_12-42.log
+ delete mode 100644 logs/run_23-09-2025_12-43.log
+ delete mode 100644 logs/run_23-09-2025_15-20.log
+ delete mode 100644 logs/run_23-09-2025_15-21.log
+ delete mode 100644 logs/run_23-09-2025_15-24.log
+ delete mode 100644 logs/run_23-09-2025_15-27.log
+ delete mode 100644 logs/run_23-09-2025_15-33.log
+ delete mode 100644 logs/run_23-09-2025_15-41.log
+ delete mode 100644 logs/run_23-09-2025_17-35.log
+ delete mode 100644 logs/run_23-09-2025_17-39.log
+ delete mode 100644 logs/run_23-09-2025_17-40.log
+ delete mode 100644 logs/run_23-09-2025_17-47.log
+ delete mode 100644 logs/run_23-09-2025_18-32.log
+ delete mode 100644 logs/run_23-09-2025_23-21.log
+ create mode 100644 logs/run_27-09-2025_8-00.log
+To https://github.com/jlzig/panoramic219
+   2b1b1aa..cb39696  main -> main
+ Generando web panorámica 21:9
+ Directorio de trabajo: C:/Users/jl/OneDrive/Python/panoramic219
+ Verificando estructura de directorios:
+ Imágenes encontradas: 6 en HD, 6 en LD
+ Generando archivo style.css completo...
+ Se generó style.css exitosamente
+ Buscando imágenes en HD...
+ Encontradas 6 imágenes en HD.
+Método 1b: Encontradas 4 palabras clave en PuertoGijon.jpg
+Método 1b: Encontradas 3 palabras clave en Sanvicente1.jpg
+Método 1b: Encontradas 6 palabras clave en congreso1.jpg
+Método 1b: Encontradas 6 palabras clave en puertodebares1.jpg
+Método 1b: Encontradas 7 palabras clave en riabarquero.jpg
+Método 1b: Encontradas 4 palabras clave en ss-4.jpg
+ Se procesaron 6 imágenes con sus miniaturas
+ Generando index.html...
+ Se generó index.html con 6 imágenes
+ Generando páginas HTML individuales...
+  Generado PuertoGijon.html  con EXIF  con mapa  con 4 palabras clave
+  Generado Sanvicente1.html  con EXIF  con mapa  con 3 palabras clave
+  Generado congreso1.html  con EXIF  con mapa  con 6 palabras clave
+  Generado puertodebares1.html  con EXIF  con mapa  con 6 palabras clave
+  Generado riabarquero.html  con EXIF  con mapa  con 7 palabras clave
+  Generado ss-4.html  con EXIF  con mapa  con 4 palabras clave
+ Subiendo a GitHub...
+ Push completado.
+Traceback (most recent call last):
+  File "C:\Users\jl\OneDrive\Python\panoramic_instagram.py", line 5, in <module>
+    from moviepy.editor import ImageSequenceClip, AudioArrayClip
+ImportError: cannot import name 'AudioArrayClip' from 'moviepy.editor' (C:\Users\jl\AppData\Roaming\Python\Python313\site-packages\moviepy\editor.py)

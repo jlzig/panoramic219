@@ -1,0 +1,17 @@
+=== SELECTOR DE IMAGEN SIMPLIFICADO ===
+NOTA: Solo procesa desde buffer/HD, las versiones LD se generan automáticamente.
+Imagen seleccionada: sanlorenzo.jpg
+¿Proceder con esta imagen? (Enter=Sí, cualquier tecla=No): 
+--- Moviendo archivo ---
+
+--- Resultado ---
+Imagen movida a: C:\Users\jl\OneDrive\Python\panoramic219\hd\sanlorenzo.jpg
+NOTA: Ejecuta panoramic219_code.py para generar las versiones LD y HTML.
+  File "C:\Users\jl\OneDrive\Python\panoramic219_code.py", line 1519
+    def subir_a_github(ruta_repo):
+    ^^^
+SyntaxError: f-string: expecting '=', or '!', or ':', or '}'
+Traceback (most recent call last):
+  File "C:\Users\jl\OneDrive\Python\panoramic_instagram.py", line 5, in <module>
+    from moviepy.editor import ImageSequenceClip, AudioArrayClip
+ImportError: cannot import name 'AudioArrayClip' from 'moviepy.editor' (C:\Users\jl\AppData\Roaming\Python\Python313\site-packages\moviepy\editor.py)
