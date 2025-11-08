@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>salamanca</title>
+  <title>thames</title>
   <link rel="stylesheet" href="../style.css">
   
   <!-- Leaflet CSS y JS para el mapa -->
@@ -64,7 +64,7 @@
       
 function initMap() {
   // Crear el mapa y centrarlo en las coordenadas
-  const map = L.map('map').setView([40.965, -5.664444445], 13);
+  const map = L.map('map').setView([51.505465, -0.07516833333333334], 13);
   
   // Añadir la capa de OpenStreetMap (solo el fondo de mapa)
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -127,13 +127,13 @@ initMap();
   <button onclick="toggleFullscreen()" class="fullscreen-button" title="Pantalla completa">⛶</button>
   
   <div class="imagen-centro">
-    <img id="panoramica" src="salamanca.jpg" alt="salamanca">
+    <img id="panoramica" src="thames.jpg" alt="thames">
     
     <!-- Navegación sobre la imagen (solo anterior y siguiente) -->
     <div class="nav-overlay">
       <div class="nav-buttons">
-        <a href="riabarquero.html" class="nav-button prev"></a>
-        <a href="thames.html" class="nav-button next"></a>
+        <a href="salamanca.html" class="nav-button prev"></a>
+        
       </div>
     </div>
   </div>
@@ -142,7 +142,7 @@ initMap();
   
 <div class="keywords-container">
   <div class="keywords-list">
-    <span class="keyword">Salamanca</span>
+    <span class="keyword">Thames</span>
   </div>
 </div>
 
@@ -166,15 +166,15 @@ initMap();
     </tr>
     <tr>
       <td>Lente</td>
-      <td>EF24-70mm f/4L IS USM</td>
+      <td>EF16-35mm f/4L IS USM</td>
     </tr>
     <tr>
       <td>Tiempo exposición</td>
-      <td>1/250 s</td>
+      <td>1/180 s</td>
     </tr>
     <tr>
       <td>Apertura</td>
-      <td>f/11.0</td>
+      <td>f/9.5</td>
     </tr>
     <tr>
       <td>ISO</td>
@@ -182,7 +182,7 @@ initMap();
     </tr>
     <tr>
       <td>Distancia focal</td>
-      <td>24 mm</td>
+      <td>16 mm</td>
     </tr>
   </table>
 </div>
