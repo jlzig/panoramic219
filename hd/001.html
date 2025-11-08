@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Arga</title>
+  <title>001</title>
   <link rel="stylesheet" href="../style.css">
   
   <!-- Leaflet CSS y JS para el mapa -->
@@ -18,7 +18,7 @@
     // Gestión de orientación y pantalla completa
     document.addEventListener('DOMContentLoaded', function() {
       const img = document.getElementById('panoramica');
-      const isLandscape = true;
+      const isLandscape = false;
       
       // Añadir clase según orientación
       if (isLandscape) {
@@ -64,7 +64,7 @@
       
 function initMap() {
   // Crear el mapa y centrarlo en las coordenadas
-  const map = L.map('map').setView([42.819304026666664, -1.6621353683333333], 13);
+  const map = L.map('map').setView([43.12889166666667, -1.54433], 13);
   
   // Añadir la capa de OpenStreetMap (solo el fondo de mapa)
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -127,25 +127,19 @@ initMap();
   <button onclick="toggleFullscreen()" class="fullscreen-button" title="Pantalla completa">⛶</button>
   
   <div class="imagen-centro">
-    <img id="panoramica" src="Arga.jpg" alt="Arga">
+    <img id="panoramica" src="001.jpg" alt="001">
     
     <!-- Navegación sobre la imagen (solo anterior y siguiente) -->
     <div class="nav-overlay">
       <div class="nav-buttons">
-        <a href="001.html" class="nav-button prev"></a>
-        <a href="PuertoGijon.html" class="nav-button next"></a>
+        
+        <a href="Arga.html" class="nav-button next"></a>
       </div>
     </div>
   </div>
   
   <!-- Palabras clave de Lightroom -->
   
-<div class="keywords-container">
-  <div class="keywords-list">
-    <span class="keyword">Arga</span>
-  </div>
-</div>
-
   
   <div class="footer-flex">
       <div class="footer-map">
@@ -162,19 +156,19 @@ initMap();
     
     <tr>
       <td>Modelo</td>
-      <td>Canon EOS 50D</td>
+      <td>Canon EOS 6D</td>
     </tr>
     <tr>
       <td>Lente</td>
-      <td>EF-S18-200mm f/3.5-5.6 IS</td>
+      <td>EF24-70mm f/4L IS USM</td>
     </tr>
     <tr>
       <td>Tiempo exposición</td>
-      <td>1/160 s</td>
+      <td>1/1500 s</td>
     </tr>
     <tr>
       <td>Apertura</td>
-      <td>f/7.1</td>
+      <td>f/5.6</td>
     </tr>
     <tr>
       <td>ISO</td>
@@ -182,7 +176,7 @@ initMap();
     </tr>
     <tr>
       <td>Distancia focal</td>
-      <td>18 mm</td>
+      <td>24 mm</td>
     </tr>
   </table>
 </div>
