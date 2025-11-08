@@ -7,3 +7,105 @@ Imagen seleccionada: 001.jpg
 --- Resultado ---
 Imagen movida a: C:\Users\jl\OneDrive\Python\panoramic219\temp\001.jpg
 NOTA: Ejecuta panoramic219_code.py para generar las versiones LD y HTML.
+ 
+ PANORAMIC219 CODE V3 - PROCESAMIENTO DESDE TEMP
+ 
+ Directorio de trabajo: C:/Users/jl/OneDrive/Python/panoramic219
+ Fuente única V3: C:/Users/jl/OneDrive/Python/panoramic219\temp
+ Procesamiento: temp > hd (con watermark) + ld (640px)
+ IMPORTANTE: Las imágenes NO se eliminan de temp
+Ejecutando: git gc --prune=now
+
+Ejecutando: git reflog expire --expire=now --all
+
+ Verificando estructura de directorios V3:
+ Imágenes en temp: 1
+ Imágenes procesadas: 16 HD, 16 LD
+ Estado inicial V3:
+   - Imágenes en temp: 1
+   - Imágenes ya procesadas: 16
+   - Imágenes pendientes de procesar: 1
+ Generando archivo style.css completo...
+ Se generó style.css exitosamente
+ V3: Procesando imágenes desde temp...
+ Encontradas 1 imágenes NUEVAS en temp para procesar:
+   - 001.jpg
+  Procesando desde temp: {filename}
+    HD con watermark guardada: C:/Users/jl/OneDrive/Python/panoramic219\hd\001.jpg
+    LD redimensionada guardada: C:/Users/jl/OneDrive/Python/panoramic219\ld\001.jpg
+    Original mantenido en temp: C:/Users/jl/OneDrive/Python/panoramic219\temp\001.jpg
+ Recolectando imágenes procesadas para la galería...
+ Encontradas 17 imágenes procesadas en total.
+Método 2: Inferidas 1 palabras clave del nombre: Arga.jpg
+Método 2: Inferidas 1 palabras clave del nombre: PuertoGijon.jpg
+Método 2: Inferidas 1 palabras clave del nombre: PzaCastillo.jpg
+Método 2: Inferidas 1 palabras clave del nombre: Sanvicente1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: almudena.jpg
+Método 2: Inferidas 1 palabras clave del nombre: colmenar-1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: congreso1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: fragas-2.jpg
+Método 2: Inferidas 1 palabras clave del nombre: fragas-3.jpg
+Método 2: Inferidas 1 palabras clave del nombre: otoño.jpg
+Método 2: Inferidas 1 palabras clave del nombre: puertodebares1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: riabarquero.jpg
+Método 2: Inferidas 1 palabras clave del nombre: salamanca.jpg
+Método 2: Inferidas 1 palabras clave del nombre: sancristobal.jpg
+Método 2: Inferidas 1 palabras clave del nombre: thames.jpg
+Método 2: Inferidas 1 palabras clave del nombre: zugarramurdi.jpg
+ Se recolectaron 17 imágenes para la galería
+ Generando index.html...
+ Se generó index.html con 17 imágenes
+ Generando páginas HTML individuales...
+  Generado 001.html  con EXIF  con mapa
+  Generado Arga.html  con EXIF  con mapa  con 1 palabras clave
+  Generado PuertoGijon.html  con EXIF  con mapa  con 1 palabras clave
+  Generado PzaCastillo.html  con EXIF  con mapa  con 1 palabras clave
+  Generado Sanvicente1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado almudena.html  con EXIF  con mapa  con 1 palabras clave
+  Generado colmenar-1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado congreso1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado fragas-2.html  con EXIF  con mapa  con 1 palabras clave
+  Generado fragas-3.html  con EXIF  con mapa  con 1 palabras clave
+  Generado otoño.html  con EXIF  con mapa  con 1 palabras clave
+  Generado puertodebares1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado riabarquero.html  con EXIF  con mapa  con 1 palabras clave
+  Generado salamanca.html  con EXIF  con mapa  con 1 palabras clave
+  Generado sancristobal.html  con EXIF  con mapa  con 1 palabras clave
+  Generado thames.html  con EXIF  con mapa  con 1 palabras clave
+  Generado zugarramurdi.html  con EXIF  con mapa  con 1 palabras clave
+ Subiendo a GitHub...
+  Agregando archivos...
+  Haciendo commit: V3: Actualización automática 08/11/2025 17:13
+  Haciendo push...
+  Push completado exitosamente.
+ Proceso V3 completado exitosamente
+ Las imágenes permanecen en temp para su posterior gestión
+___________________________________________________________
+PANORAMIC INSTAGRAM - GENERADOR Y PUBLICADOR
+___________________________________________________________
+Fecha: 08/11/2025 17:15:09
+Modo publicación: three_posts  | Also album: True
+Formato slices:   portrait | Full style: crop
+Verificando directorios...
+Imágenes pendientes: 1
+
+--- GENERANDO SECUENCIAS (01–04) ---
+  - Generando secuencia para 001.jpg
+  - Secuencia creada: 001_01.jpg, 001_02.jpg, 001_03.jpg, 001_04.jpg
+
+--- PUBLICANDO ---
+Login correcto.
+
+[1/1] Publicando: 001.jpg
+  - Publicado: 001_04.jpg
+  - Publicado: 001_03.jpg
+  - Publicado: 001_02.jpg
+  - Álbum publicado.
+
+___________________________________________________________
+RESUMEN
+___________________________________________________________
+Secuencias generadas: 1
+Ítems procesados para publicación: 1
+Directorio imágenes:  C:\Users\jl\OneDrive\Python\panoramic219\instagram
+Logout realizado.
