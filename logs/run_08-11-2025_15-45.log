@@ -7,3 +7,107 @@ Imagen seleccionada: almudena.jpg
 --- Resultado ---
 Imagen movida a: C:\Users\jl\OneDrive\Python\panoramic219\temp\almudena.jpg
 NOTA: Ejecuta panoramic219_code.py para generar las versiones LD y HTML.
+ 
+ PANORAMIC219 CODE V3 - PROCESAMIENTO DESDE TEMP
+ 
+ Directorio de trabajo: C:/Users/jl/OneDrive/Python/panoramic219
+ Fuente única V3: C:/Users/jl/OneDrive/Python/panoramic219\temp
+ Procesamiento: temp > hd (con watermark) + ld (640px)
+ IMPORTANTE: Las imágenes NO se eliminan de temp
+Ejecutando: git gc --prune=now
+
+Ejecutando: git reflog expire --expire=now --all
+
+ Verificando estructura de directorios V3:
+ Imágenes en temp: 5
+ Imágenes procesadas: 14 HD, 14 LD
+ Estado inicial V3:
+   - Imágenes en temp: 5
+   - Imágenes ya procesadas: 14
+   - Imágenes pendientes de procesar: 1
+ Generando archivo style.css completo...
+ Se generó style.css exitosamente
+ V3: Procesando imágenes desde temp...
+ Encontradas 1 imágenes NUEVAS en temp para procesar:
+   - almudena.jpg
+  Procesando desde temp: {filename}
+    HD con watermark guardada: C:/Users/jl/OneDrive/Python/panoramic219\hd\almudena.jpg
+    LD redimensionada guardada: C:/Users/jl/OneDrive/Python/panoramic219\ld\almudena.jpg
+    Original mantenido en temp: C:/Users/jl/OneDrive/Python/panoramic219\temp\almudena.jpg
+ Saltadas 4 imágenes que ya están procesadas:
+   - PzaCastillo.jpg (ya existe en HD)
+   - riabarquero.jpg (ya existe en HD)
+   - thames.jpg (ya existe en HD)
+   - zugarramurdi.jpg (ya existe en HD)
+ Recolectando imágenes procesadas para la galería...
+ Encontradas 15 imágenes procesadas en total.
+Método 2: Inferidas 1 palabras clave del nombre: Arga.jpg
+Método 2: Inferidas 1 palabras clave del nombre: PuertoGijon.jpg
+Método 2: Inferidas 1 palabras clave del nombre: PzaCastillo.jpg
+Método 2: Inferidas 1 palabras clave del nombre: Sanvicente1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: almudena.jpg
+Método 2: Inferidas 1 palabras clave del nombre: colmenar-1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: congreso1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: fragas-2.jpg
+Método 2: Inferidas 1 palabras clave del nombre: fragas-3.jpg
+Método 2: Inferidas 1 palabras clave del nombre: otoño.jpg
+Método 2: Inferidas 1 palabras clave del nombre: puertodebares1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: riabarquero.jpg
+Método 2: Inferidas 1 palabras clave del nombre: salamanca.jpg
+Método 2: Inferidas 1 palabras clave del nombre: thames.jpg
+Método 2: Inferidas 1 palabras clave del nombre: zugarramurdi.jpg
+ Se recolectaron 15 imágenes para la galería
+ Generando index.html...
+ Se generó index.html con 15 imágenes
+ Generando páginas HTML individuales...
+  Generado Arga.html  con EXIF  con mapa  con 1 palabras clave
+  Generado PuertoGijon.html  con EXIF  con mapa  con 1 palabras clave
+  Generado PzaCastillo.html  con EXIF  con mapa  con 1 palabras clave
+  Generado Sanvicente1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado almudena.html  con EXIF  con mapa  con 1 palabras clave
+  Generado colmenar-1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado congreso1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado fragas-2.html  con EXIF  con mapa  con 1 palabras clave
+  Generado fragas-3.html  con EXIF  con mapa  con 1 palabras clave
+  Generado otoño.html  con EXIF  con mapa  con 1 palabras clave
+  Generado puertodebares1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado riabarquero.html  con EXIF  con mapa  con 1 palabras clave
+  Generado salamanca.html  con EXIF  con mapa  con 1 palabras clave
+  Generado thames.html  con EXIF  con mapa  con 1 palabras clave
+  Generado zugarramurdi.html  con EXIF  con mapa  con 1 palabras clave
+ Subiendo a GitHub...
+  Agregando archivos...
+  Haciendo commit: V3: Actualización automática 08/11/2025 15:45
+  Haciendo push...
+  Error inesperado: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>
+ Proceso completado pero falló la subida a GitHub
+___________________________________________________________
+PANORAMIC INSTAGRAM - GENERADOR SECUENCIAS
+___________________________________________________________
+Fecha: 08/11/2025 15:47:00
+Modo publicación: four_posts
+Formato slices:   portrait
+Full style:       letterbox
+Verificando directorios...
+Imágenes pendientes: 1
+
+--- GENERANDO SECUENCIAS ---
+  - Generando secuencia para almudena.jpg
+  - Secuencia creada: almudena_01.jpg, almudena_02.jpg, almudena_03.jpg, almudena_04.jpg
+
+--- PUBLICANDO ---
+Login correcto.
+
+[1/1] Publicando: almudena.jpg
+  - Publicado: almudena_04.jpg
+  - Publicado: almudena_03.jpg
+  - Publicado: almudena_02.jpg
+  - Publicado: almudena_01.jpg
+
+___________________________________________________________
+RESUMEN
+___________________________________________________________
+Secuencias generadas: 1
+Secuencias publicadas: 1
+Directorio imágenes:  C:\Users\jl\OneDrive\Python\panoramic219\instagram
+Logout realizado.
