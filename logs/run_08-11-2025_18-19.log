@@ -7,3 +7,105 @@ Imagen seleccionada: trafalgar.jpg
 --- Resultado ---
 Imagen movida a: C:\Users\jl\OneDrive\Python\panoramic219\temp\trafalgar.jpg
 NOTA: Ejecuta panoramic219_code.py para generar las versiones LD y HTML.
+ 
+ PANORAMIC219 CODE V3 - PROCESAMIENTO DESDE TEMP
+ 
+ Directorio de trabajo: C:/Users/jl/OneDrive/Python/panoramic219
+ Fuente única V3: C:/Users/jl/OneDrive/Python/panoramic219\temp
+ Procesamiento: temp > hd (con watermark) + ld (640px)
+ IMPORTANTE: Las imágenes NO se eliminan de temp
+Ejecutando: git gc --prune=now
+
+Ejecutando: git reflog expire --expire=now --all
+
+ Verificando estructura de directorios V3:
+ Imágenes en temp: 1
+ Imágenes procesadas: 15 HD, 15 LD
+ Estado inicial V3:
+   - Imágenes en temp: 1
+   - Imágenes ya procesadas: 15
+   - Imágenes pendientes de procesar: 1
+ Generando archivo style.css completo...
+ Se generó style.css exitosamente
+ V3: Procesando imágenes desde temp...
+ Encontradas 1 imágenes NUEVAS en temp para procesar:
+   - trafalgar.jpg
+  Procesando desde temp: {filename}
+    HD con watermark guardada: C:/Users/jl/OneDrive/Python/panoramic219\hd\trafalgar.jpg
+    LD redimensionada guardada: C:/Users/jl/OneDrive/Python/panoramic219\ld\trafalgar.jpg
+    Original mantenido en temp: C:/Users/jl/OneDrive/Python/panoramic219\temp\trafalgar.jpg
+ Recolectando imágenes procesadas para la galería...
+ Encontradas 16 imágenes procesadas en total.
+Método 2: Inferidas 1 palabras clave del nombre: PuertoGijon.jpg
+Método 2: Inferidas 1 palabras clave del nombre: PzaCastillo.jpg
+Método 2: Inferidas 1 palabras clave del nombre: Sanvicente1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: abbadia.jpg
+Método 2: Inferidas 1 palabras clave del nombre: colmenar-1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: congreso1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: fragas-2.jpg
+Método 2: Inferidas 1 palabras clave del nombre: fragas-3.jpg
+Método 2: Inferidas 1 palabras clave del nombre: otoño.jpg
+Método 2: Inferidas 1 palabras clave del nombre: puertodebares1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: riabarquero.jpg
+Método 2: Inferidas 1 palabras clave del nombre: salamanca.jpg
+Método 2: Inferidas 1 palabras clave del nombre: sancristobal.jpg
+Método 2: Inferidas 1 palabras clave del nombre: thames.jpg
+Método 2: Inferidas 1 palabras clave del nombre: trafalgar.jpg
+Método 2: Inferidas 1 palabras clave del nombre: zugarramurdi.jpg
+ Se recolectaron 16 imágenes para la galería
+ Generando index.html...
+ Se generó index.html con 16 imágenes
+ Generando páginas HTML individuales...
+  Generado PuertoGijon.html  con EXIF  con mapa  con 1 palabras clave
+  Generado PzaCastillo.html  con EXIF  con mapa  con 1 palabras clave
+  Generado Sanvicente1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado abbadia.html  con EXIF  con mapa  con 1 palabras clave
+  Generado colmenar-1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado congreso1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado fragas-2.html  con EXIF  con mapa  con 1 palabras clave
+  Generado fragas-3.html  con EXIF  con mapa  con 1 palabras clave
+  Generado otoño.html  con EXIF  con mapa  con 1 palabras clave
+  Generado puertodebares1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado riabarquero.html  con EXIF  con mapa  con 1 palabras clave
+  Generado salamanca.html  con EXIF  con mapa  con 1 palabras clave
+  Generado sancristobal.html  con EXIF  con mapa  con 1 palabras clave
+  Generado thames.html  con EXIF  con mapa  con 1 palabras clave
+  Generado trafalgar.html  con EXIF  con mapa  con 1 palabras clave
+  Generado zugarramurdi.html  con EXIF  con mapa  con 1 palabras clave
+ Subiendo a GitHub...
+  Agregando archivos...
+  Haciendo commit: V3: Actualización automática 08/11/2025 18:19
+  Haciendo push...
+  Push completado exitosamente.
+ Proceso V3 completado exitosamente
+ Las imágenes permanecen en temp para su posterior gestión
+___________________________________________________________
+PANORAMIC INSTAGRAM - GENERADOR SECUENCIAS
+___________________________________________________________
+Fecha: 08/11/2025 18:21:37
+Modo publicación: four_posts
+Formato slices:   portrait
+Full style:       letterbox
+Verificando directorios...
+Imágenes pendientes: 1
+
+--- GENERANDO SECUENCIAS ---
+  - Generando secuencia para trafalgar.jpg
+  - Secuencia creada: trafalgar_01.jpg, trafalgar_02.jpg, trafalgar_03.jpg, trafalgar_04.jpg
+
+--- PUBLICANDO ---
+Login correcto.
+
+[1/1] Publicando: trafalgar.jpg
+  - Publicado: trafalgar_04.jpg
+  - Publicado: trafalgar_03.jpg
+  - Publicado: trafalgar_02.jpg
+  - Publicado: trafalgar_01.jpg
+
+___________________________________________________________
+RESUMEN
+___________________________________________________________
+Secuencias generadas: 1
+Secuencias publicadas: 1
+Directorio imágenes:  C:\Users\jl\OneDrive\Python\panoramic219\instagram
+Logout realizado.
