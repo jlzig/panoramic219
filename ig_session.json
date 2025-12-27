@@ -1,0 +1,37 @@
+{
+    "uuids": {
+        "phone_id": "f16d9f12-40b1-4c9a-86d9-64a8a28bd568",
+        "uuid": "7989e21e-5bc0-48d8-861e-24104055b6bc",
+        "client_session_id": "ec392515-1e3e-4b38-b8bb-1e6739c68f55",
+        "advertising_id": "bce5800d-de6b-414e-b41d-00926b426f3d",
+        "android_device_id": "android-75fe1a28e4f79d81",
+        "request_id": "e483ea82-b6fe-4f28-b2b8-39e5f7791244",
+        "tray_session_id": "0d9dd241-ccea-4b8f-98de-d608e75c2875"
+    },
+    "mid": "aUZrDgABAAFSVPqvkY96Sitzxmwg",
+    "ig_u_rur": null,
+    "ig_www_claim": null,
+    "authorization_data": {
+        "ds_user_id": "73998715865",
+        "sessionid": "73998715865%3AGduEl9i24vH9Ui%3A14%3AAYifIuNPrHR6eAgtXyq-uoOjC9Wg4lKORAHid2rlag"
+    },
+    "cookies": {},
+    "last_login": 1766222663.8957841,
+    "device_settings": {
+        "app_version": "269.0.0.18.75",
+        "android_version": 29,
+        "android_release": "10",
+        "dpi": "420dpi",
+        "resolution": "1080x1920",
+        "manufacturer": "Xiaomi",
+        "device": "raphael",
+        "model": "Mi 9T",
+        "cpu": "qcom",
+        "version_code": "314665256"
+    },
+    "user_agent": "Instagram 269.0.0.18.75 Android (26/8.0.0; 480dpi; 1080x1920; OnePlus; 6T Dev; devitron; qcom; en_US; 314665256)",
+    "country": "US",
+    "country_code": 1,
+    "locale": "en_US",
+    "timezone_offset": -14400
+}
