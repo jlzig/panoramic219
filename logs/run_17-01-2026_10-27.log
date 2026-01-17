@@ -6,3 +6,71 @@ Imagen seleccionada: colmenar-3.jpg
 --- Resultado ---
 Imagen movida a: C:\Users\jl\OneDrive\Python\panoramic219\temp\colmenar-3.jpg
 El archivo ya no está en: C:\Users\jl\OneDrive\Python\panoramic219\buffer\HD_SM
+ 
+ PANORAMIC219 CODE V3 - PROCESAMIENTO DESDE TEMP
+ 
+ Directorio de trabajo: C:/Users/jl/OneDrive/Python/panoramic219
+ Fuente única V3: C:/Users/jl/OneDrive/Python/panoramic219\temp
+ Procesamiento: temp > hd (con watermark) + ld (640px)
+ IMPORTANTE: Las imágenes NO se eliminan de temp
+Ejecutando: git gc --prune=now
+
+Ejecutando: git reflog expire --expire=now --all
+
+ Verificando estructura de directorios V3:
+ Imágenes en temp: 9
+ Imágenes procesadas: 9 HD, 9 LD
+ Estado inicial V3:
+   - Imágenes en temp: 9
+   - Imágenes ya procesadas: 9
+   - Imágenes pendientes de procesar: 0
+ Generando archivo style.css completo...
+ Se generó style.css exitosamente
+ V3: Procesando imágenes desde temp...
+ No hay imágenes nuevas en temp para procesar.
+ Saltadas 9 imágenes que ya están procesadas:
+   - 20251207__MG_3519-Pano.jpg (ya existe en HD)
+   - Arga.jpg (ya existe en HD)
+   - Gorraiz.jpg (ya existe en HD)
+   - Sanvicente1.jpg (ya existe en HD)
+   - colmenar-3.jpg (ya existe en HD)
+   - fragas-1.jpg (ya existe en HD)
+   - montejurra.jpg (ya existe en HD)
+   - roquenublo.jpg (ya existe en HD)
+   - ss-5.jpg (ya existe en HD)
+ Recolectando imágenes procesadas para la galería...
+ Encontradas 9 imágenes procesadas en total.
+Método 2: Inferidas 2 palabras clave del nombre: 20251207__MG_3519-Pano.jpg
+Método 2: Inferidas 1 palabras clave del nombre: Arga.jpg
+Método 2: Inferidas 1 palabras clave del nombre: Gorraiz.jpg
+Método 2: Inferidas 1 palabras clave del nombre: Sanvicente1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: colmenar-3.jpg
+Método 2: Inferidas 1 palabras clave del nombre: fragas-1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: montejurra.jpg
+Método 2: Inferidas 1 palabras clave del nombre: roquenublo.jpg
+Método 2: Inferidas 1 palabras clave del nombre: ss-5.jpg
+ Se recolectaron 9 imágenes para la galería
+ Generando index.html...
+ Se generó index.html con 9 imágenes
+ Generando páginas HTML individuales...
+  Generado 20251207__MG_3519-Pano.html  con EXIF  con mapa  con 1 palabras clave
+  Generado Arga.html  con EXIF  con mapa  con 1 palabras clave
+  Generado Gorraiz.html  con EXIF  con mapa  con 1 palabras clave
+  Generado Sanvicente1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado colmenar-3.html  con EXIF  con mapa  con 1 palabras clave
+  Generado fragas-1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado montejurra.html  con EXIF  con mapa  con 1 palabras clave
+  Generado roquenublo.html  con EXIF  con mapa  con 1 palabras clave
+  Generado ss-5.html  con EXIF  con mapa  con 1 palabras clave
+ Subiendo a GitHub...
+  Agregando archivos...
+  Haciendo commit: V3: Actualización automática 17/01/2026 10:27
+  Haciendo push...
+  Push completado exitosamente.
+ Proceso V3 completado exitosamente
+ Las imágenes permanecen en temp para su posterior gestión
+___________________________________________________________
+PANORAMIC INSTAGRAM - 4 IMÁGENES EN ÁLBUM (ROBUSTO)
+___________________________________________________________
+17/01/2026 10:29:15
+No hay imágenes nuevas.
