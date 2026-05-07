@@ -6,3 +6,147 @@ Imagen seleccionada: riabarquero3.jpg
 --- Resultado ---
 Imagen movida a: C:\Users\jl\OneDrive\Python\panoramic219\temp\riabarquero3.jpg
 El archivo ya no está en: C:\Users\jl\OneDrive\Python\panoramic219\buffer\HD_SM
+ 
+ PANORAMIC219 CODE V3 - PROCESAMIENTO DESDE TEMP
+ 
+ Directorio de trabajo: C:/Users/jl/OneDrive/Python/panoramic219
+ Fuente única V3: C:/Users/jl/OneDrive/Python/panoramic219\temp
+ Procesamiento: temp > hd (con watermark) + ld (640px)
+ IMPORTANTE: Las imágenes NO se eliminan de temp
+Ejecutando: git gc --prune=now
+
+Ejecutando: git reflog expire --expire=now --all
+
+ Verificando estructura de directorios V3:
+ Imágenes en temp: 17
+ Imágenes procesadas: 16 HD, 16 LD
+ Estado inicial V3:
+   - Imágenes en temp: 17
+   - Imágenes ya procesadas: 16
+   - Imágenes pendientes de procesar: 1
+ Generando archivo style.css completo...
+ Se generó style.css exitosamente
+ V3: Procesando imágenes desde temp...
+ Encontradas 1 imágenes NUEVAS en temp para procesar:
+   - riabarquero3.jpg
+  Procesando desde temp: {filename}
+    HD con watermark guardada: C:/Users/jl/OneDrive/Python/panoramic219\hd\riabarquero3.jpg
+    LD redimensionada guardada: C:/Users/jl/OneDrive/Python/panoramic219\ld\riabarquero3.jpg
+    Original mantenido en temp: C:/Users/jl/OneDrive/Python/panoramic219\temp\riabarquero3.jpg
+ Saltadas 16 imágenes que ya están procesadas:
+   - 20250713__MG_2209.jpg (ya existe en HD)
+   - 20251207__MG_3470-Pano.jpg (ya existe en HD)
+   - 20251207__MG_3519-Pano.jpg (ya existe en HD)
+   - Arga.jpg (ya existe en HD)
+   - Gorraiz.jpg (ya existe en HD)
+   - Sanvicente1.jpg (ya existe en HD)
+   - colmenar-3.jpg (ya existe en HD)
+   - fragas-1.jpg (ya existe en HD)
+   - montejurra.jpg (ya existe en HD)
+   - ortigueira.jpg (ya existe en HD)
+   - paris1.jpg (ya existe en HD)
+   - picon.jpg (ya existe en HD)
+   - roquenublo.jpg (ya existe en HD)
+   - semaforo.jpg (ya existe en HD)
+   - ss-5.jpg (ya existe en HD)
+   - trafalgar.jpg (ya existe en HD)
+ Recolectando imágenes procesadas para la galería...
+ Encontradas 17 imágenes procesadas en total.
+Método 2: Inferidas 2 palabras clave del nombre: 20250713__MG_2209.jpg
+Método 2: Inferidas 2 palabras clave del nombre: 20251207__MG_3470-Pano.jpg
+Método 2: Inferidas 2 palabras clave del nombre: 20251207__MG_3519-Pano.jpg
+Método 2: Inferidas 1 palabras clave del nombre: Arga.jpg
+Método 2: Inferidas 1 palabras clave del nombre: Gorraiz.jpg
+Método 2: Inferidas 1 palabras clave del nombre: Sanvicente1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: colmenar-3.jpg
+Método 2: Inferidas 1 palabras clave del nombre: fragas-1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: montejurra.jpg
+Método 2: Inferidas 1 palabras clave del nombre: ortigueira.jpg
+Método 2: Inferidas 1 palabras clave del nombre: paris1.jpg
+Método 2: Inferidas 1 palabras clave del nombre: picon.jpg
+Método 2: Inferidas 1 palabras clave del nombre: riabarquero3.jpg
+Método 2: Inferidas 1 palabras clave del nombre: roquenublo.jpg
+Método 2: Inferidas 1 palabras clave del nombre: semaforo.jpg
+Método 2: Inferidas 1 palabras clave del nombre: ss-5.jpg
+Método 2: Inferidas 1 palabras clave del nombre: trafalgar.jpg
+ Se recolectaron 17 imágenes para la galería
+ Generando index.html...
+ Se generó index.html con 17 imágenes
+ Generando páginas HTML individuales...
+  Generado 20250713__MG_2209.html  con EXIF  con mapa  con 1 palabras clave
+  Generado 20251207__MG_3470-Pano.html  con EXIF  con mapa  con 1 palabras clave
+  Generado 20251207__MG_3519-Pano.html  con EXIF  con mapa  con 1 palabras clave
+  Generado Arga.html  con EXIF  con mapa  con 1 palabras clave
+  Generado Gorraiz.html  con EXIF  con mapa  con 1 palabras clave
+  Generado Sanvicente1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado colmenar-3.html  con EXIF  con mapa  con 1 palabras clave
+  Generado fragas-1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado montejurra.html  con EXIF  con mapa  con 1 palabras clave
+  Generado ortigueira.html  con EXIF  con mapa  con 1 palabras clave
+  Generado paris1.html  con EXIF  con mapa  con 1 palabras clave
+  Generado picon.html  con EXIF  con mapa  con 1 palabras clave
+  Generado riabarquero3.html  con EXIF  con mapa  con 1 palabras clave
+  Generado roquenublo.html  con EXIF  con mapa  con 1 palabras clave
+  Generado semaforo.html  con EXIF  con mapa  con 1 palabras clave
+  Generado ss-5.html  con EXIF  con mapa  con 1 palabras clave
+  Generado trafalgar.html  con EXIF  con mapa  con 1 palabras clave
+ Subiendo a GitHub...
+  Agregando archivos...
+  Haciendo commit: V3: Actualización automática 07/03/2026 08:00
+  Haciendo push...
+  Push completado exitosamente.
+ Proceso V3 completado exitosamente
+ Las imágenes permanecen en temp para su posterior gestión
+___________________________________________________________
+PANORAMIC INSTAGRAM - 4 IMÁGENES EN ÁLBUM (ROBUSTO)
+___________________________________________________________
+07/03/2026 08:01:50
+  - Componiendo secuencia para riabarquero3.jpg
+Login completo en Instagram...
+Traceback (most recent call last):
+  File "C:\Users\jl\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jl\.conda\envs\panoramic\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\jl\.conda\envs\panoramic\Lib\json\decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jl\.conda\envs\panoramic\Lib\json\decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\jl\OneDrive\Python\panoramic_instagram.py", line 333, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\jl\OneDrive\Python\panoramic_instagram.py", line 293, in main
+    cl = instagram_login()
+  File "C:\Users\jl\OneDrive\Python\panoramic_instagram.py", line 227, in instagram_login
+    return do_login(cl, verification_code=TWOFA_CODE)
+  File "C:\Users\jl\OneDrive\Python\panoramic_instagram.py", line 183, in do_login
+    cl.login(INSTAGRAM_USERNAME, INSTAGRAM_PASSWORD, verification_code=verification_code)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jl\AppData\Roaming\Python\Python313\site-packages\instagrapi\mixins\auth.py", line 476, in login
+    self.login_flow()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\jl\AppData\Roaming\Python\Python313\site-packages\instagrapi\mixins\auth.py", line 186, in login_flow
+    check_flow.append(self.get_reels_tray_feed("cold_start"))
+                      ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\jl\AppData\Roaming\Python\Python313\site-packages\instagrapi\mixins\auth.py", line 280, in get_reels_tray_feed
+    return self.private_request("feed/reels_tray/", data)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jl\AppData\Roaming\Python\Python313\site-packages\instagrapi\mixins\private.py", line 548, in private_request
+    self.challenge_resolve(self.last_json)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\jl\AppData\Roaming\Python\Python313\site-packages\instagrapi\mixins\challenge.py", line 80, in challenge_resolve
+    return self.challenge_resolve_contact_form(challenge_url)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\jl\AppData\Roaming\Python\Python313\site-packages\instagrapi\mixins\challenge.py", line 163, in challenge_resolve_contact_form
+    result = result.json()
+  File "C:\Users\jl\AppData\Roaming\Python\Python313\site-packages\requests\models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
